@@ -14955,6 +14955,13 @@ $as_echo "no" >&6; }
   # Built-in libxml2 on OS X 10.8 lacks libxml-2.0.pc.
   if test "${HAVE_LIBXML2}" != "yes" -a "$opsys" = "darwin"; then
     SAVE_CPPFLAGS="$CPPFLAGS"
+    if test -z "$xcsdkdir" -a -n "$XCRUN" -a ! -d /usr/include; then
+            xcsdkdir=`$XCRUN --show-sdk-path 2>/dev/null`
+      case $xcsdkdir in
+	*[\\\"\#\$\&\'\`$am_lf\ \	]*)
+	xcsdkdir="" ;;
+      esac
+    fi
     CPPFLAGS="$CPPFLAGS -I$xcsdkdir/usr/include/libxml2"
     ac_fn_c_check_header_mongrel "$LINENO" "libxml/HTMLparser.h" "ac_cv_header_libxml_HTMLparser_h" "$ac_includes_default"
 if test "x$ac_cv_header_libxml_HTMLparser_h" = xyes; then :
