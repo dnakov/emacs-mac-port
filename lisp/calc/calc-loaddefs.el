@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "calc-aent" "calc-aent.el" "0b3193cb3d596642ddfd3fbd2b53691c")
+;;;### (autoloads nil "calc-aent" "calc-aent.el" "11d6b53781263b581818e4623d923980")
 ;;; Generated autoloads from calc-aent.el
 
 (autoload 'calc-do-quick-calc "calc-aent" "\
@@ -103,7 +103,7 @@ Replace some substrings of STR by Calc equivalents.
 
 ;;;***
 
-;;;### (autoloads nil "calc-embed" "calc-embed.el" "97c365828a256826710c346c25eb0ee6")
+;;;### (autoloads nil "calc-embed" "calc-embed.el" "8e4a8d94bfac6c5600270a1ca9ec7592")
 ;;; Generated autoloads from calc-embed.el
 
 (autoload 'calc-do-embedded-activate "calc-embed" "\
@@ -113,7 +113,7 @@ Replace some substrings of STR by Calc equivalents.
 
 ;;;***
 
-;;;### (autoloads nil "calc-misc" "calc-misc.el" "6c51be874eea683653d7b741e059838f")
+;;;### (autoloads nil "calc-misc" "calc-misc.el" "e45372bc385e5b1ff6e310cd065ad278")
 ;;; Generated autoloads from calc-misc.el
 
 (autoload 'calc-dispatch-help "calc-misc" "\
@@ -424,7 +424,7 @@ Prompts for bug subject.  Leaves you in a mail buffer.
 
 ;;;***
 
-;;;### (autoloads nil "calc-yank" "calc-yank.el" "543bc99dbfc52a0e73df0c241d6365dc")
+;;;### (autoloads nil "calc-yank" "calc-yank.el" "74c0d274c0ec8366861bc9a48943bf54")
 ;;; Generated autoloads from calc-yank.el
 
 (autoload 'calc-yank "calc-yank" "\

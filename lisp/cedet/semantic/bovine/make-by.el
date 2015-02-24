@@ -1,6 +1,6 @@
 ;;; semantic/bovine/make-by.el --- Generated parser support file
 
-;; Copyright (C) 1999-2014 Free Software Foundation, Inc.
+;; Copyright (C) 1999-2015 Free Software Foundation, Inc.
 
 ;; This file is part of GNU Emacs.
 

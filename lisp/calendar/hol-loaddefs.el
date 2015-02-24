@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-bahai.el
 
 (autoload 'holiday-bahai "cal-bahai" "\
@@ -29,8 +29,8 @@ Only considers the first, ninth, and twelfth days, unless ALL or
 
 ;;;***
 
-;;;### (autoloads nil "cal-china" "cal-china.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-china" "cal-china.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-china.el
 
 (autoload 'holiday-chinese-new-year "cal-china" "\
@@ -61,8 +61,8 @@ Returns nil if it is not visible in the current calendar window.
 
 ;;;***
 
-;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-hebrew.el
 
 (autoload 'holiday-hebrew "cal-hebrew" "\
@@ -116,8 +116,8 @@ Kiddush HaHamah.
 
 ;;;***
 
-;;;### (autoloads nil "cal-islam" "cal-islam.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-islam" "cal-islam.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-islam.el
 
 (autoload 'holiday-islamic "cal-islam" "\
@@ -135,8 +135,8 @@ Holiday entry for the Islamic New Year, if visible in the calendar window.
 
 ;;;***
 
-;;;### (autoloads nil "cal-julian" "cal-julian.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-julian" "cal-julian.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-julian.el
 
 (autoload 'holiday-julian "cal-julian" "\
@@ -149,7 +149,7 @@ nil if it is not visible in the current calendar window.
 
 ;;;***
 
-;;;### (autoloads nil "solar" "solar.el" (21291 53104 431149 0))
+;;;### (autoloads nil "solar" "solar.el" (21710 25465 95935 269000))
 ;;; Generated autoloads from solar.el
 
 (autoload 'solar-equinoxes-solstices "solar" "\
@@ -165,7 +165,7 @@ Requires floating point.
 ;;;;;;  "cal-mayan.el" "cal-menu.el" "cal-move.el" "cal-persia.el"
 ;;;;;;  "cal-tex.el" "cal-x.el" "calendar.el" "diary-lib.el" "diary-loaddefs.el"
 ;;;;;;  "holidays.el" "icalendar.el" "lunar.el" "parse-time.el" "time-date.el"
-;;;;;;  "timeclock.el" "todo-mode.el") (21569 15427 178792 15000))
+;;;;;;  "timeclock.el" "todo-mode.el") (21713 25977 723862 809000))
 
 ;;;***
 

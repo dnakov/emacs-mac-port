@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "srecode/compile" "compile.el" "48a6ae8207fbcbe467584e5a1d87b81b")
+;;;### (autoloads nil "srecode/compile" "compile.el" "13a6e818d50afe07e2a46fe6d96bafc0")
 ;;; Generated autoloads from compile.el
 
 (autoload 'srecode-compile-templates "srecode/compile" "\
@@ -13,7 +13,7 @@ Compile a semantic recode template file into a mode-local variable.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/cpp" "cpp.el" "891ae022d68c006d7b286b916953ac6b")
+;;;### (autoloads nil "srecode/cpp" "cpp.el" "5a4e2a92af20335e612066940dc17c5f")
 ;;; Generated autoloads from cpp.el
 
 (autoload 'srecode-semantic-handle-:c "srecode/cpp" "\
@@ -34,7 +34,7 @@ Also adds the following:
 
 ;;;***
 
-;;;### (autoloads nil "srecode/document" "document.el" "a3a695c7173adad2493c0377f6dade53")
+;;;### (autoloads nil "srecode/document" "document.el" "5926f0c792a02e521f353276775e9b01")
 ;;; Generated autoloads from document.el
 
 (autoload 'srecode-document-insert-comment "srecode/document" "\
@@ -74,7 +74,7 @@ If there is only one tag in the region, complain.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/el" "el.el" "228d96130b8fa6a686110459798356cb")
+;;;### (autoloads nil "srecode/el" "el.el" "1ecd2db472627c48613b4d0ba9f03dcc")
 ;;; Generated autoloads from el.el
 
 (autoload 'srecode-semantic-handle-:el "srecode/el" "\
@@ -94,7 +94,7 @@ Adds the following:
 
 ;;;***
 
-;;;### (autoloads nil "srecode/expandproto" "expandproto.el" "c639448ff771374e8d3761e9ce5fc3f4")
+;;;### (autoloads nil "srecode/expandproto" "expandproto.el" "51b16bb758c137ad26dff108407fc924")
 ;;; Generated autoloads from expandproto.el
 
 (autoload 'srecode-insert-prototype-expansion "srecode/expandproto" "\
@@ -104,7 +104,7 @@ Insert get/set methods for the current class.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/getset" "getset.el" "e5e677bea51a6c63354dcc2e5984a61c")
+;;;### (autoloads nil "srecode/getset" "getset.el" "a13607d709b498d1591c00c79d6e50a0")
 ;;; Generated autoloads from getset.el
 
 (autoload 'srecode-insert-getset "srecode/getset" "\
@@ -118,7 +118,7 @@ will be derived.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/insert" "insert.el" "48dc6e18eeabb74e594b658858a0367f")
+;;;### (autoloads nil "srecode/insert" "insert.el" "a29527588420871e6b13db6ba55d7c3c")
 ;;; Generated autoloads from insert.el
 
 (autoload 'srecode-insert "srecode/insert" "\
@@ -129,7 +129,7 @@ DICT-ENTRIES are additional dictionary values to add.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/java" "java.el" "b5a6b1d781f40b5b4369ed6d216b4690")
+;;;### (autoloads nil "srecode/java" "java.el" "49411a2bdd7d184f996003fe1d424030")
 ;;; Generated autoloads from java.el
 
 (autoload 'srecode-semantic-handle-:java "srecode/java" "\
@@ -142,7 +142,7 @@ FILENAME_AS_CLASS - file converted to a Java class name.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/map" "map.el" "f02b8c2b1b42b222d390c1ca325e48cd")
+;;;### (autoloads nil "srecode/map" "map.el" "57b8e045b19a4a3e3e4464ce5b72b8b7")
 ;;; Generated autoloads from map.el
 
 (autoload 'srecode-get-maps "srecode/map" "\
@@ -153,7 +153,7 @@ Optional argument RESET forces a reset of the current map.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/mode" "mode.el" "030707d3e0c13efdb7c9b6799de308c4")
+;;;### (autoloads nil "srecode/mode" "mode.el" "fac7f17eb32957a02beb41a947673cb9")
 ;;; Generated autoloads from mode.el
 
 (autoload 'srecode-minor-mode "srecode/mode" "\
@@ -184,7 +184,7 @@ If ARG is positive or nil, enable, if it is negative, disable.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/srt" "srt.el" "4b06afb73c01b9b272c0d81c28324c23")
+;;;### (autoloads nil "srecode/srt" "srt.el" "4207647e6ec9d2b1b5cfc99dcf977cae")
 ;;; Generated autoloads from srt.el
 
 (autoload 'srecode-semantic-handle-:srt "srecode/srt" "\
@@ -198,7 +198,7 @@ MODE - The mode of this buffer.  If not declared yet, guess.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/template" "template.el" "044cf74ce8b0c22978a8b6c869c45f34")
+;;;### (autoloads nil "srecode/template" "template.el" "906bde54bf3be815c975268510013fb3")
 ;;; Generated autoloads from template.el
 
 (autoload 'srecode-template-setup-parser "srecode/template" "\
@@ -208,7 +208,7 @@ Setup buffer for parse.
 
 ;;;***
 
-;;;### (autoloads nil "srecode/texi" "texi.el" "f0750e5bf83b5c76bd681e03864cad25")
+;;;### (autoloads nil "srecode/texi" "texi.el" "dfdd72a7fcb36d696fc49787d8091d18")
 ;;; Generated autoloads from texi.el
 
 (autoload 'srecode-semantic-handle-:texi "srecode/texi" "\

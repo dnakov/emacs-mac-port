@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "mh-acros" "mh-acros.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-acros" "mh-acros.el" (21710 25547 137569
+;;;;;;  507000))
 ;;; Generated autoloads from mh-acros.el
 
 (autoload 'mh-require-cl "mh-acros" "\
@@ -128,8 +128,8 @@ MH-E functions.
 
 ;;;***
 
-;;;### (autoloads nil "mh-alias" "mh-alias.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-alias" "mh-alias.el" (21710 25465 234934
+;;;;;;  649000))
 ;;; Generated autoloads from mh-alias.el
 
 (autoload 'mh-alias-reload-maybe "mh-alias" "\
@@ -175,8 +175,8 @@ Add alias for the sender of the current message.
 
 ;;;***
 
-;;;### (autoloads nil "mh-comp" "mh-comp.el" (21546 52205 704969
-;;;;;;  0))
+;;;### (autoloads nil "mh-comp" "mh-comp.el" (21710 25465 234934
+;;;;;;  649000))
 ;;; Generated autoloads from mh-comp.el
 
 (autoload 'mh-edit-again "mh-comp" "\
@@ -358,8 +358,8 @@ added; otherwise return nil.
 
 ;;;***
 
-;;;### (autoloads nil "mh-folder" "mh-folder.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-folder" "mh-folder.el" (21710 25465 235934
+;;;;;;  644000))
 ;;; Generated autoloads from mh-folder.el
 
 (autoload 'mh-delete-msg "mh-folder" "\
@@ -825,8 +825,8 @@ Return the file name of MSG in FOLDER (default current folder).
 
 ;;;***
 
-;;;### (autoloads nil "mh-funcs" "mh-funcs.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-funcs" "mh-funcs.el" (21710 25465 235934
+;;;;;;  644000))
 ;;; Generated autoloads from mh-funcs.el
 
 (autoload 'mh-burst-digest "mh-funcs" "\
@@ -950,8 +950,8 @@ Arguments are IGNORED (for `revert-buffer').
 
 ;;;***
 
-;;;### (autoloads nil "mh-identity" "mh-identity.el" (21291 53104
-;;;;;;  431149 0))
+;;;### (autoloads nil "mh-identity" "mh-identity.el" (21710 25465
+;;;;;;  235934 644000))
 ;;; Generated autoloads from mh-identity.el
 
 (autoload 'mh-identity-make-menu "mh-identity" "\
@@ -1025,7 +1025,7 @@ the header.
 
 ;;;***
 
-;;;### (autoloads nil "mh-inc" "mh-inc.el" (21291 53104 431149 0))
+;;;### (autoloads nil "mh-inc" "mh-inc.el" (21710 25465 236934 640000))
 ;;; Generated autoloads from mh-inc.el
 
 (autoload 'mh-inc-spool-make "mh-inc" "\
@@ -1035,8 +1035,8 @@ Make all commands and defines keys for contents of `mh-inc-spool-list'.
 
 ;;;***
 
-;;;### (autoloads nil "mh-junk" "mh-junk.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-junk" "mh-junk.el" (21710 25465 236934
+;;;;;;  640000))
 ;;; Generated autoloads from mh-junk.el
 
 (autoload 'mh-junk-blacklist "mh-junk" "\
@@ -1298,8 +1298,8 @@ See `mh-spamprobe-blacklist' for more information.
 
 ;;;***
 
-;;;### (autoloads nil "mh-letter" "mh-letter.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-letter" "mh-letter.el" (21710 25465 236934
+;;;;;;  640000))
 ;;; Generated autoloads from mh-letter.el
 
 (autoload 'mh-letter-mode "mh-letter" "\
@@ -1415,8 +1415,8 @@ callable from a mouse button.
 
 ;;;***
 
-;;;### (autoloads nil "mh-limit" "mh-limit.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-limit" "mh-limit.el" (21710 25465 236934
+;;;;;;  640000))
 ;;; Generated autoloads from mh-limit.el
 
 (autoload 'mh-delete-subject "mh-limit" "\
@@ -1489,8 +1489,8 @@ Use \\<mh-folder-mode-map>\\[mh-widen] to undo this command.
 
 ;;;***
 
-;;;### (autoloads nil "mh-mime" "mh-mime.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-mime" "mh-mime.el" (21710 25465 236934
+;;;;;;  640000))
 ;;; Generated autoloads from mh-mime.el
 
 (autoload 'mh-buffer-data "mh-mime" "\
@@ -1825,8 +1825,8 @@ Free MIME data for externally displayed MIME parts.
 
 ;;;***
 
-;;;### (autoloads nil "mh-print" "mh-print.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-print" "mh-print.el" (21710 25465 236934
+;;;;;;  640000))
 ;;; Generated autoloads from mh-print.el
 
 (autoload 'mh-ps-print-msg "mh-print" "\
@@ -1910,8 +1910,8 @@ Consider using \\[mh-ps-print-msg] instead.
 
 ;;;***
 
-;;;### (autoloads nil "mh-scan" "mh-scan.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-scan" "mh-scan.el" (21710 25465 237934
+;;;;;;  635000))
 ;;; Generated autoloads from mh-scan.el
 
 (autoload 'mh-scan-msg-number-regexp "mh-scan" "\
@@ -1955,8 +1955,8 @@ comes after that.
 
 ;;;***
 
-;;;### (autoloads nil "mh-search" "mh-search.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-search" "mh-search.el" (21710 25465 237934
+;;;;;;  635000))
 ;;; Generated autoloads from mh-search.el
 
 (autoload 'mh-search "mh-search" "\
@@ -2221,7 +2221,7 @@ origin-index) map is updated too.
 
 ;;;***
 
-;;;### (autoloads nil "mh-seq" "mh-seq.el" (21291 53104 431149 0))
+;;;### (autoloads nil "mh-seq" "mh-seq.el" (21710 25465 237934 635000))
 ;;; Generated autoloads from mh-seq.el
 
 (autoload 'mh-catchup "mh-seq" "\
@@ -2513,8 +2513,8 @@ Remove all notations on all scan lines that MH-E introduces.
 
 ;;;***
 
-;;;### (autoloads nil "mh-show" "mh-show.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-show" "mh-show.el" (21710 25465 237934
+;;;;;;  635000))
 ;;; Generated autoloads from mh-show.el
 
 (autoload 'mh-show "mh-show" "\
@@ -2631,8 +2631,8 @@ Highlight cited text in current buffer using Gnus.
 
 ;;;***
 
-;;;### (autoloads nil "mh-speed" "mh-speed.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-speed" "mh-speed.el" (21710 25465 237934
+;;;;;;  635000))
 ;;; Generated autoloads from mh-speed.el
 
 (autoload 'mh-folder-speedbar-buttons "mh-speed" "\
@@ -2668,8 +2668,8 @@ The function invalidates the latest ancestor that is present.
 
 ;;;***
 
-;;;### (autoloads nil "mh-thread" "mh-thread.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-thread" "mh-thread.el" (21710 25465 238934
+;;;;;;  631000))
 ;;; Generated autoloads from mh-thread.el
 
 (autoload 'mh-thread-ancestor "mh-thread" "\
@@ -2759,8 +2759,8 @@ Forget the message INDEX from the threading tables.
 
 ;;;***
 
-;;;### (autoloads nil "mh-utils" "mh-utils.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-utils" "mh-utils.el" (21710 25465 238934
+;;;;;;  631000))
 ;;; Generated autoloads from mh-utils.el
 
 (autoload 'mh-search-from-end "mh-utils" "\
@@ -3066,8 +3066,8 @@ Return non-nil if buffer includes \"^-- $\".
 
 ;;;***
 
-;;;### (autoloads nil "mh-xface" "mh-xface.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "mh-xface" "mh-xface.el" (21710 25465 238934
+;;;;;;  631000))
 ;;; Generated autoloads from mh-xface.el
 
 (autoload 'mh-show-xface "mh-xface" "\
@@ -3084,7 +3084,7 @@ This is only done if `mh-x-image-cache-directory' is nil.
 ;;;***
 
 ;;;### (autoloads nil nil ("mh-buffers.el" "mh-compat.el" "mh-e.el"
-;;;;;;  "mh-gnus.el" "mh-tool-bar.el") (21569 15427 659841 7000))
+;;;;;;  "mh-gnus.el" "mh-tool-bar.el") (21713 25978 875868 895000))
 
 ;;;***
 

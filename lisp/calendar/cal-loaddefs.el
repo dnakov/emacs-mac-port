@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-bahai.el
 
 (autoload 'calendar-bahai-date-string "cal-bahai" "\
@@ -46,8 +46,8 @@ Prefix argument ARG will make the entry nonmarking.
 
 ;;;***
 
-;;;### (autoloads nil "cal-china" "cal-china.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-china" "cal-china.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-china.el
 
 (autoload 'calendar-chinese-date-string "cal-china" "\
@@ -69,8 +69,8 @@ Echo Chinese date unless NOECHO is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil "cal-coptic" "cal-coptic.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-coptic" "cal-coptic.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-coptic.el
 
 (autoload 'calendar-coptic-date-string "cal-coptic" "\
@@ -111,8 +111,8 @@ Echo Ethiopic date unless NOECHO is t.
 
 ;;;***
 
-;;;### (autoloads nil "cal-french" "cal-french.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-french" "cal-french.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-french.el
 
 (autoload 'calendar-french-date-string "cal-french" "\
@@ -135,8 +135,8 @@ Echo French Revolutionary date unless NOECHO is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-hebrew.el
 
 (autoload 'calendar-hebrew-date-string "cal-hebrew" "\
@@ -178,8 +178,8 @@ Prefix argument ARG makes the entry nonmarking.
 
 ;;;***
 
-;;;### (autoloads nil "cal-html" "cal-html.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-html" "cal-html.el" (21710 25465 91935
+;;;;;;  286000))
 ;;; Generated autoloads from cal-html.el
 
 (autoload 'cal-html-cursor-month "cal-html" "\
@@ -201,8 +201,8 @@ specified by EVENT.  Note that any existing output files are overwritten.
 
 ;;;***
 
-;;;### (autoloads nil "cal-islam" "cal-islam.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-islam" "cal-islam.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-islam.el
 
 (autoload 'calendar-islamic-date-string "cal-islam" "\
@@ -246,8 +246,7 @@ Prefix argument ARG makes the entry nonmarking.
 
 ;;;***
 
-;;;### (autoloads nil "cal-iso" "cal-iso.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-iso" "cal-iso.el" (21710 25547 58569 859000))
 ;;; Generated autoloads from cal-iso.el
 
 (autoload 'calendar-iso-from-absolute "cal-iso" "\
@@ -285,8 +284,8 @@ Interactively, goes to the first day of the specified week.
 
 ;;;***
 
-;;;### (autoloads nil "cal-julian" "cal-julian.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-julian" "cal-julian.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-julian.el
 
 (autoload 'calendar-julian-from-absolute "cal-julian" "\
@@ -342,8 +341,8 @@ Echo astronomical (Julian) day number unless NOECHO is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil "cal-mayan" "cal-mayan.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-mayan" "cal-mayan.el" (21710 25547 59569
+;;;;;;  855000))
 ;;; Generated autoloads from cal-mayan.el
 
 (autoload 'calendar-mayan-date-string "cal-mayan" "\
@@ -400,8 +399,8 @@ Echo Mayan date unless NOECHO is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil "cal-move" "cal-move.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-move" "cal-move.el" (21710 25547 59569
+;;;;;;  855000))
 ;;; Generated autoloads from cal-move.el
 
 (autoload 'calendar-cursor-to-nearest-date "cal-move" "\
@@ -549,8 +548,8 @@ Negative DAY counts backward from end of year.
 
 ;;;***
 
-;;;### (autoloads nil "cal-persia" "cal-persia.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-persia" "cal-persia.el" (21710 25547 59569
+;;;;;;  855000))
 ;;; Generated autoloads from cal-persia.el
 
 (autoload 'calendar-persian-date-string "cal-persia" "\
@@ -571,8 +570,7 @@ Echo Persian date unless NOECHO is non-nil.
 
 ;;;***
 
-;;;### (autoloads nil "cal-tex" "cal-tex.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-tex" "cal-tex.el" (21710 25465 92935 282000))
 ;;; Generated autoloads from cal-tex.el
 
 (autoload 'cal-tex-cursor-year "cal-tex" "\
@@ -721,7 +719,7 @@ a buffer position to use instead of point.
 
 ;;;***
 
-;;;### (autoloads nil "cal-x" "cal-x.el" (21291 53104 431149 0))
+;;;### (autoloads nil "cal-x" "cal-x.el" (21710 25547 59569 855000))
 ;;; Generated autoloads from cal-x.el
 
 (autoload 'calendar-frame-setup "cal-x" "\
@@ -764,8 +762,8 @@ See `calendar-frame-setup' for more information.
 
 ;;;***
 
-;;;### (autoloads nil "diary-lib" "diary-lib.el" (21522 31638 598764
-;;;;;;  0))
+;;;### (autoloads nil "diary-lib" "diary-lib.el" (21710 25547 60569
+;;;;;;  851000))
 ;;; Generated autoloads from diary-lib.el
 
 (autoload 'diary-live-p "diary-lib" "\
@@ -897,8 +895,8 @@ Return a value for the variable `diary-font-lock-keywords'.
 
 ;;;***
 
-;;;### (autoloads nil "holidays" "holidays.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "holidays" "holidays.el" (21710 25547 60569
+;;;;;;  851000))
 ;;; Generated autoloads from holidays.el
 
 (autoload 'calendar-list-holidays "holidays" "\
@@ -926,7 +924,7 @@ use instead of point.
 
 ;;;***
 
-;;;### (autoloads nil "lunar" "lunar.el" (21291 53104 431149 0))
+;;;### (autoloads nil "lunar" "lunar.el" (21710 25547 61569 846000))
 ;;; Generated autoloads from lunar.el
 
 (autoload 'calendar-lunar-phases "lunar" "\
@@ -940,7 +938,7 @@ use instead of point.
 
 ;;;***
 
-;;;### (autoloads nil "solar" "solar.el" (21291 53104 431149 0))
+;;;### (autoloads nil "solar" "solar.el" (21710 25465 95935 269000))
 ;;; Generated autoloads from solar.el
 
 (autoload 'calendar-sunrise-sunset "solar" "\
@@ -958,7 +956,7 @@ Local time of sunrise and sunset for month under cursor or at EVENT.
 
 ;;;### (autoloads nil nil ("appt.el" "cal-dst.el" "cal-menu.el" "calendar.el"
 ;;;;;;  "icalendar.el" "parse-time.el" "time-date.el" "timeclock.el"
-;;;;;;  "todo-mode.el") (21569 15425 713436 342000))
+;;;;;;  "todo-mode.el") (21713 25975 484692 252000))
 
 ;;;***
 

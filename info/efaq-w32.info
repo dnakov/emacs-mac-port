@@ -1,24 +1,23 @@
-This is ../../info/efaq-w32.info, produced by makeinfo version 4.13
-from ./efaq-w32.texi.
+This is efaq-w32.info, produced by makeinfo version 5.2 from
+efaq-w32.texi.
 
-Copyright (C) 2008, 2010-2014 Free Software Foundation, Inc.
+Copyright © 2008, 2010-2015 Free Software Foundation, Inc.
 
      This list of frequently asked questions about GNU Emacs on MS
-     Windows with answers ("FAQ") may be translated into other
-     languages, transformed into other formats (e.g. Texinfo, Info,
+     Windows with answers (“FAQ”) may be translated into other
+     languages, transformed into other formats (e.g.  Texinfo, Info,
      WWW), and updated with new information.
 
      The same conditions apply to any derivative of the FAQ as apply to
      the FAQ itself.  Every copy of the FAQ must include this notice or
      an approved translation, information on who is currently
-     maintaining the FAQ and how to contact them (including their
-     e-mail address), and information on where the latest version of
-     the FAQ is archived (including FTP information).
+     maintaining the FAQ and how to contact them (including their e-mail
+     address), and information on where the latest version of the FAQ is
+     archived (including FTP information).
 
      The FAQ may be copied and redistributed under these conditions,
      except that the FAQ may not be embedded in a larger literary work
      unless that work itself allows free copying and redistribution.
-
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
 * Emacs W32 FAQ: (efaq-w32).	FAQs about Emacs on MS Windows.
@@ -31,7 +30,7 @@ GNU Emacs FAQ for MS Windows
 ****************************
 
 This is the FAQ for using GNU Emacs on MS Windows, as distributed with
-Emacs 24.4.
+Emacs 24.4.90.
 
    This FAQ is maintained by the developers and users of Emacs on MS
 Windows.  If you find any errors, or have any suggestions, please send
@@ -39,21 +38,21 @@ them to the help-emacs-windows
 (http://lists.gnu.org/mailman/listinfo/help-emacs-windows) mailing list.
 
    At time of writing, the latest version of GNU Emacs is version
-24.4.
+24.4.90.
 
-   Copyright (C) 2008, 2010-2014 Free Software Foundation, Inc.
+   Copyright © 2008, 2010-2015 Free Software Foundation, Inc.
 
      This list of frequently asked questions about GNU Emacs on MS
-     Windows with answers ("FAQ") may be translated into other
-     languages, transformed into other formats (e.g. Texinfo, Info,
+     Windows with answers (“FAQ”) may be translated into other
+     languages, transformed into other formats (e.g.  Texinfo, Info,
      WWW), and updated with new information.
 
      The same conditions apply to any derivative of the FAQ as apply to
      the FAQ itself.  Every copy of the FAQ must include this notice or
      an approved translation, information on who is currently
-     maintaining the FAQ and how to contact them (including their
-     e-mail address), and information on where the latest version of
-     the FAQ is archived (including FTP information).
+     maintaining the FAQ and how to contact them (including their e-mail
+     address), and information on where the latest version of the FAQ is
+     archived (including FTP information).
 
      The FAQ may be copied and redistributed under these conditions,
      except that the FAQ may not be embedded in a larger literary work
@@ -97,13 +96,13 @@ File: efaq-w32.info,  Node: Why Emacs on Windows,  Next: Which versions of Windo
 1.1 Why support GNU Emacs on Windows?
 =====================================
 
-It is not our goal to "help Windows users" by making text editing on
-Windows more convenient.  We aim to replace proprietary software, not
-to enhance it.  So why support GNU Emacs on Windows?
+It is not our goal to “help Windows users” by making text editing on
+Windows more convenient.  We aim to replace proprietary software, not to
+enhance it.  So why support GNU Emacs on Windows?
 
    We hope that the experience of using GNU Emacs on Windows will give
-programmers a taste of freedom, and that this will later inspire them
-to move to a free operating system such as GNU/Linux.  That is the main
+programmers a taste of freedom, and that this will later inspire them to
+move to a free operating system such as GNU/Linux.  That is the main
 valid reason to support free applications on nonfree operating systems.
 
 
@@ -112,7 +111,7 @@ File: efaq-w32.info,  Node: Which versions of Windows,  Next: Other versions of 
 1.2 Which versions of Windows are supported?
 ============================================
 
-Emacs 24.4 is known to run on all versions of Windows from Windows 98
+Emacs 24.4.90 is known to run on all versions of Windows from Windows 98
 and Windows NT 4.0 through to Windows 7.  The Windows port is built
 using the Win32 API and supports most features of the X version,
 including variable width fonts, images and tooltips.
@@ -125,9 +124,9 @@ File: efaq-w32.info,  Node: Other versions of Emacs,  Prev: Which versions of Wi
 
 *Note Cygwin::.
 
-   Emacs can also be compiled for MSDOS.  When run on recent MS Windows,
+   Emacs can also be compiled for MSDOS. When run on recent MS Windows,
 it supports long file names, and uses the Windows clipboard.  See the
-`msdos' directory in the Emacs sources for building instructions
+‘msdos’ directory in the Emacs sources for building instructions
 (requires DJGPP).
 
 
@@ -152,7 +151,7 @@ Pre-compiled versions are distributed from ftp.gnu.org mirrors
 (http://ftpmirror.gnu.org/emacs/windows/).  Emacs binaries are
 distributed as zip files, digitally signed by the developer who built
 them.  Generally most users will want the file
-`emacs-24.4-bin-i386.zip', which contains everything you need to get
+‘emacs-24.4.90-bin-i386.zip’, which contains everything you need to get
 started.
 
    The latest source is available from ftp.gnu.org mirrors
@@ -169,19 +168,19 @@ File: efaq-w32.info,  Node: Compiling,  Next: Debugging,  Prev: Downloading,  Up
 ===================================
 
 To compile Emacs on Windows, you will need the MingW or Cygwin port of
-GCC with MingW make, or a Microsoft C compiler with nmake and the
-single threaded C runtime library.  Recent versions of Microsoft Visual
-Studio no longer come with the single threaded C runtime library, which
-is required for certain POSIX compatibility, so MingW is usually the
-best choice.  Image support requires external libraries, the headers
-and import libraries for which will need to be installed where your
-compiler can find them.  You will also need ports of GNU `rm' and `cp',
-as the Windows native equivalents are not consistent between versions.
-GNU texinfo will be required to build the manuals.  *Note Other useful
+GCC with MingW make, or a Microsoft C compiler with nmake and the single
+threaded C runtime library.  Recent versions of Microsoft Visual Studio
+no longer come with the single threaded C runtime library, which is
+required for certain POSIX compatibility, so MingW is usually the best
+choice.  Image support requires external libraries, the headers and
+import libraries for which will need to be installed where your compiler
+can find them.  You will also need ports of GNU ‘rm’ and ‘cp’, as the
+Windows native equivalents are not consistent between versions.  GNU
+texinfo will be required to build the manuals.  *Note Other useful
 ports::.
 
-   After unpacking the source, or checking out of Bzr, be sure to read
-the instructions in `nt/README' and `nt/INSTALL'.
+   After unpacking the source, or checking out of the repository, be
+sure to read the instructions in ‘nt/README’ and ‘nt/INSTALL’.
 
 
 File: efaq-w32.info,  Node: Debugging,  Prev: Compiling,  Up: Getting Emacs
@@ -193,9 +192,9 @@ By default, Emacs is compiled with debugging on, and optimizations
 enabled.  The optimizations may interfere with some types of debugging;
 the debugger may not show clearly where it is, or may not be able to
 inspect certain variables.  If this is the case, reconfigure with
-`--no-opt'.
+‘--no-opt’.
 
-   The file `etc/DEBUG' contains general debugging hints, as well as
+   The file ‘etc/DEBUG’ contains general debugging hints, as well as
 specific notes about debugging Emacs with both gdb and Microsoft
 debuggers.
 
@@ -211,9 +210,9 @@ File: efaq-w32.info,  Node: GDB,  Next: Microsoft Developer Studio,  Up: Debuggi
 ---------
 
 GDB is the GNU debugger, which can be used to debug Emacs when it has
-been compiled with GCC.  The best results will be obtained if you start
-gdb from the `src' directory as `gdb oo/i386/emacs.exe'.  This will
-load the init file `.gdbinit' in that directory, to define some extra
+been compiled with GCC. The best results will be obtained if you start
+gdb from the ‘src’ directory as ‘gdb oo/i386/emacs.exe’.  This will load
+the init file ‘.gdbinit’ in that directory, to define some extra
 commands for working with lisp while debugging, and set up breakpoints
 to catch abnormal aborts.
 
@@ -223,9 +222,9 @@ File: efaq-w32.info,  Node: Microsoft Developer Studio,  Prev: GDB,  Up: Debuggi
 2.3.2 Microsoft Developer Studio
 --------------------------------
 
-MS DevStudio can be used to debug Emacs when it has been compiled with
-a Microsoft compiler.  To view lisp variables, you can call the
-function `debug_print' from the Quickwatch window.  Some old tips
+MS DevStudio can be used to debug Emacs when it has been compiled with a
+Microsoft compiler.  To view lisp variables, you can call the function
+‘debug_print’ from the Quickwatch window.  Some old tips
 (http://www.gnu.org/software/emacs/windows/ntemacs/discuss/debug.txt)
 are probably still valid.
 
@@ -261,8 +260,8 @@ File: efaq-w32.info,  Node: Unpacking,  Next: Installing,  Up: Installing Emacs
 
 The binary distributions are distributed as zip files, which are handled
 natively by Windows XP and later.  For earlier versions, there are many
-tools that can handle the zip format, from InfoZip's command line unzip
-tool, to 7zip's multi-format graphical archive explorer.  Although
+tools that can handle the zip format, from InfoZip’s command line unzip
+tool, to 7zip’s multi-format graphical archive explorer.  Although
 popular, WinZip has caused problems with line-ends in the past, and is
 not Free software, so we do not recommend it.
 
@@ -272,11 +271,11 @@ Windows ports of the command line gzip and tar tools from multiple
 sources.  *Note Other useful ports::.
 
    The command to unpack a source distribution from the command line is:
-     tar xzf emacs-24.4.tar.gz
+     tar xzf emacs-24.4.90.tar.gz
 
    If this does not work with the versions of tar and gzip that you
 have, you may need to try a two step process:
-     gzip -dc emacs-24.4.tar.gz | tar xvf -
+     gzip -dc emacs-24.4.90.tar.gz | tar xvf -
 
    You may see many messages from tar complaining about being unable to
 change the modification time on directories, and from gzip complaining
@@ -292,7 +291,7 @@ File: efaq-w32.info,  Node: Installing,  Next: Image support,  Prev: Unpacking, 
 You can run Emacs without any extra steps, but if you want icons in your
 Start Menu, or for Emacs to detect the image libraries that are already
 installed on your system as part of GTK, then you should run the program
-`emacs-24.4\bin\addpm.exe'.
+‘emacs-24.4.90\bin\addpm.exe’.
 
 
 File: efaq-w32.info,  Node: Image support,  Next: Init file,  Prev: Installing,  Up: Installing Emacs
@@ -316,7 +315,7 @@ File: efaq-w32.info,  Node: Init file,  Next: Location of init file,  Prev: Imag
 =========================
 
 When Emacs starts up, it attempts to load and execute the contents of a
-file commonly called `.emacs' (though it may have other names, *note
+file commonly called ‘.emacs’ (though it may have other names, *note
 Where do I put my init file?: Installing Emacs.) which contains any
 customizations you have made.  You can manually add lisp code to your
 .emacs, or you can use the Customization interface accessible from the
@@ -334,36 +333,32 @@ compatibility with DOS and FAT filesystems where filenames could not
 start with a dot.  Some users prefer to continue using such a name,
 because Explorer cannot create a file with a name starting with a dot,
 even though the filesystem and most other programs can handle it.  In
-Emacs 22 and later, the init file may also be called
-`.emacs.d/init.el'.  Many of the other files that are created by lisp
-packages are now stored in the `.emacs.d' directory too, so this keeps
-all your Emacs related files in one place.
+Emacs 22 and later, the init file may also be called ‘.emacs.d/init.el’.
+Many of the other files that are created by lisp packages are now stored
+in the ‘.emacs.d’ directory too, so this keeps all your Emacs related
+files in one place.
 
-   All the files mentioned above should go in your `HOME' directory.
-The `HOME' directory is determined by following the steps below:
+   All the files mentioned above should go in your ‘HOME’ directory.
+The ‘HOME’ directory is determined by following the steps below:
 
-  1. If the environment variable `HOME' is set, use the directory it
+  1. If the environment variable ‘HOME’ is set, use the directory it
      indicates.
-
-  2. If the registry entry `HKCU\SOFTWARE\GNU\Emacs\HOME' is set, use
+  2. If the registry entry ‘HKCU\SOFTWARE\GNU\Emacs\HOME’ is set, use
      the directory it indicates.
-
-  3. If the registry entry `HKLM\SOFTWARE\GNU\Emacs\HOME' is set, use
+  3. If the registry entry ‘HKLM\SOFTWARE\GNU\Emacs\HOME’ is set, use
      the directory it indicates.  Not recommended, as it results in
      users sharing the same HOME directory.
-
-  4. If `C:\.emacs' exists, then use `C:/'.  This is for backward
-     compatibility, as previous versions defaulted to `C:/' if `HOME'
+  4. If ‘C:\.emacs’ exists, then use ‘C:/’.  This is for backward
+     compatibility, as previous versions defaulted to ‘C:/’ if ‘HOME’
      was not set.
-
-  5. Use the user's AppData directory, usually a directory called
-     `Application Data' under the user's profile directory, the location
+  5. Use the user’s AppData directory, usually a directory called
+     ‘Application Data’ under the user’s profile directory, the location
      of which varies according to Windows version and whether the
      computer is part of a domain.
 
    Within Emacs, <~> at the beginning of a file name is expanded to your
-`HOME' directory, so you can always find your .emacs file with `C-x C-f
-~/.emacs'.
+‘HOME’ directory, so you can always find your .emacs file with ‘C-x C-f
+~/.emacs’.
 
 
 File: efaq-w32.info,  Node: Troubleshooting init file,  Next: Associate files with Emacs,  Prev: Location of init file,  Up: Installing Emacs
@@ -371,18 +366,18 @@ File: efaq-w32.info,  Node: Troubleshooting init file,  Next: Associate files wi
 3.6 Troubleshooting init file problems
 ======================================
 
-If you've set `HOME' to a directory using one of the above methods, and
-Emacs still doesn't load your init file, the first thing you should do
-is check to see what Emacs thinks `HOME' is set to.  You can do this by
-evaluating the following expression in the `*scratch*' buffer using
-`C-x C-e':
+If you’ve set ‘HOME’ to a directory using one of the above methods, and
+Emacs still doesn’t load your init file, the first thing you should do
+is check to see what Emacs thinks ‘HOME’ is set to.  You can do this by
+evaluating the following expression in the ‘*scratch*’ buffer using ‘C-x
+C-e’:
 
      (insert (getenv "HOME"))
 
    Look carefully at what is printed and make sure the value is valid.
-For example, if the value has trailing whitespace, Emacs won't be able
-to find the directory.  Also, be sure that the value isn't a relative
-drive letter (e.g., `d:' without a backslash); if it is, then `HOME' is
+For example, if the value has trailing whitespace, Emacs won’t be able
+to find the directory.  Also, be sure that the value isn’t a relative
+drive letter (e.g., ‘d:’ without a backslash); if it is, then ‘HOME’ is
 going to be whatever the current directory on that drive is, which is
 likely not what you want to happen.
 
@@ -393,9 +388,9 @@ File: efaq-w32.info,  Node: Associate files with Emacs,  Next: Find-file and the
 ========================================
 
 The recommended way to associate files is to associate them with
-`emacsclientw.exe'.  In order for this to work when Emacs is not yet
+‘emacsclientw.exe’.  In order for this to work when Emacs is not yet
 started, you will also need to set the environment variable
-`ALTERNATE_EDITOR' to `runemacs.exe'.  To open files in a running
+‘ALTERNATE_EDITOR’ to ‘runemacs.exe’.  To open files in a running
 instance of Emacs, you will need to add the following to your init file:
      (server-start)
 
@@ -409,26 +404,22 @@ File: efaq-w32.info,  Node: Using with Explorer,  Up: Associate files with Emacs
 3.7.1 For use with Internet Explorer
 ------------------------------------
 
-You can use Emacs as the editor for composing mail for <mailto:> links,
-reading usenet for <news:> links, and viewing source.  The following
+You can use Emacs as the editor for composing mail for ‘mailto:’ links,
+reading usenet for ‘news:’ links, and viewing source.  The following
 registry entries control this:
 
      Mail
-        * *Key:* HKCR\mailto\shell\open\command\(Default)
-
-        * *Value:* emacsclientw -e "(message-mail (substring \"%1\" 7))"
+        • *Key:* HKCR\mailto\shell\open\command\(Default)
+        • *Value:* emacsclientw -e "(message-mail (substring \"%1\" 7))"
 
      News
-        * *Key:* HKCR\news\shell\open\command\(Default)
-
-        * *Value:* emacsclientw -e "(gnus-fetch-group (substring \"%1\"
+        • *Key:* HKCR\news\shell\open\command\(Default)
+        • *Value:* emacsclientw -e "(gnus-fetch-group (substring \"%1\"
           5)"
 
      View Source
-        * *Key:* HKCR\htmlfile\shell\edit\command\(Default)
-
-        * *Value:* emacsclientw "%1"
-
+        • *Key:* HKCR\htmlfile\shell\edit\command\(Default)
+        • *Value:* emacsclientw "%1"
 
    Thanks to Jason Rumney and Sigbjorn Finne for these tips.
 
@@ -441,15 +432,15 @@ File: efaq-w32.info,  Node: Find-file and the Desktop,  Next: Make Windows more 
 The location of the Desktop varies between different versions of
 Windows, and in a corporate environment can be moved around by the
 network administrator.  On NT derivatives, you can use the value of the
-`USERPROFILE' environment variable to find where the desktop might be:
+‘USERPROFILE’ environment variable to find where the desktop might be:
 
      C-x C-f $USERPROFILE/Desktop
 
-   If this doesn't work, then you probably have to forgo the keyboard
+   If this doesn’t work, then you probably have to forgo the keyboard
 just this once, and either drag a file onto the Emacs frame from the
 desktop, or use the file dialog (displayed when you use the toolbar or
 menu by default).  Once you have a file from the Desktop inside Emacs,
-`C-x C-f' will quickly reveal where your desktop is kept.
+‘C-x C-f’ will quickly reveal where your desktop is kept.
 
 
 File: efaq-w32.info,  Node: Make Windows more like X,  Next: Make Emacs like a Windows app,  Prev: Find-file and the Desktop,  Up: Installing Emacs
@@ -468,12 +459,12 @@ File: efaq-w32.info,  Node: Focus follows mouse,  Next: Swap CapsLock and Contro
 3.9.1 How do it make the active window follow the mouse?
 --------------------------------------------------------
 
-Customize the variables `focus-follows-mouse' and
-`mouse-autoselect-window'.  The former can be used to mislead Emacs
-into giving focus to other frames when the mouse is over them, even
-though Windows has a click to focus policy by default (there is
-software available to change that though).  The latter can be used to
-make Emacs use a focus-follow-mouse policy within its own frames.
+Customize the variables ‘focus-follows-mouse’ and
+‘mouse-autoselect-window’.  The former can be used to mislead Emacs into
+giving focus to other frames when the mouse is over them, even though
+Windows has a click to focus policy by default (there is software
+available to change that though).  The latter can be used to make Emacs
+use a focus-follow-mouse policy within its own frames.
 
 
 File: efaq-w32.info,  Node: Swap CapsLock and Control,  Prev: Focus follows mouse,  Up: Make Windows more like X
@@ -496,7 +487,7 @@ File: efaq-w32.info,  Node: Swap Caps NT,  Next: Swap Caps 98,  Up: Swap CapsLoc
 3.9.2.1 Windows NT/2000/XP/Vista?
 .................................
 
-   * From Chris McMahon.  To make CapsLock a Control key (leaving your
+   • From Chris McMahon.  To make CapsLock a Control key (leaving your
      original control keys as they were), use this registry file:
           REGEDIT4
 
@@ -507,12 +498,11 @@ File: efaq-w32.info,  Node: Swap Caps NT,  Next: Swap Caps 98,  Up: Swap CapsLoc
 
           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
           "Scancode Map"=hex:00,00,00,00,00,00,00,00,03,00,00,00,1d,00,3a,00,3a,00,1d,00,00,00,00,00
-     Save these as files with a `.reg' extension, and double-click on
-     them in Explorer, or "run" them from a command prompt to have them
+     Save these as files with a ‘.reg’ extension, and double-click on
+     them in Explorer, or “run” them from a command prompt to have them
      update your registry (you may need to reboot).
-
-   * Shane Holder gives some background on how "Scancode Map" is used
-     by the system:
+   • Shane Holder gives some background on how "Scancode Map" is used by
+     the system:
           It's a binary value that lets you map keystrokes in the low-level keyboard
           drivers in NT.  As a result you don't have to worry about applications
           bypassing mappings that you've done at a higher level (i.e. it just works).
@@ -536,8 +526,7 @@ File: efaq-w32.info,  Node: Swap Caps NT,  Next: Swap Caps 98,  Up: Swap CapsLoc
 
           This registry value is system wide, and can't be made user-specific.  It
           also only takes affect on reboot.
-
-   * Ulfar Erlingsson has provided a registry file that sets the
+   • Ulfar Erlingsson has provided a registry file that sets the
      CapsLock key to be a Control key and the Windows key to be an Alt
      key:
           REGEDIT4
@@ -564,7 +553,7 @@ File: efaq-w32.info,  Node: Make Emacs like a Windows app,  Next: Window operati
 Many beginning users find Emacs difficult to use because its user
 interface is different in many ways.  Emacs predates most UI standards,
 and experienced Emacs users are used to the way things are, so changing
-the defaults is difficult.  Most of the "standard" behavior can be
+the defaults is difficult.  Most of the “standard” behavior can be
 approximated in Emacs after some configuring though.
 
 * Menu:
@@ -578,28 +567,28 @@ File: efaq-w32.info,  Node: Highlight selection,  Next: CUA,  Up: Make Emacs lik
 3.10.1 Highlighting the selection
 ---------------------------------
 
-Emacs has a concept of a mark and point that is similar to selections
-in other programs.  But the mark in Emacs is used for more than just
-defining the selected region, it lives on while you continue to edit
-and move around the buffer so it can also be a kind of bookmark.  The
+Emacs has a concept of a mark and point that is similar to selections in
+other programs.  But the mark in Emacs is used for more than just
+defining the selected region, it lives on while you continue to edit and
+move around the buffer so it can also be a kind of bookmark.  The
 history of marks is saved so you can pop previous marks back to the top
-of the stack to go back to somewhere you were some time ago.  Because
-of this dual purpose, the region between mark and point is not
-highlighted by default unless you select a region by clicking and
-dragging the mouse.
+of the stack to go back to somewhere you were some time ago.  Because of
+this dual purpose, the region between mark and point is not highlighted
+by default unless you select a region by clicking and dragging the
+mouse.
 
-   The minor mode `transient-mark-mode' changes the behavior of the
-mark in two ways.  First, it distinguishes between an active mark that
-has just been defined or reactivated, and an inactive mark.  When the
-mark is active, some commands that normally act on lines, words,
-buffers etc. will instead act on the region.  An inactive mark needs to
-be reactivated to operate on it, unless `mark-even-if-inactive' is set.
-Secondly, `transient-mark-mode' also highlights the region when it is
+   The minor mode ‘transient-mark-mode’ changes the behavior of the mark
+in two ways.  First, it distinguishes between an active mark that has
+just been defined or reactivated, and an inactive mark.  When the mark
+is active, some commands that normally act on lines, words, buffers etc.
+will instead act on the region.  An inactive mark needs to be
+reactivated to operate on it, unless ‘mark-even-if-inactive’ is set.
+Secondly, ‘transient-mark-mode’ also highlights the region when it is
 active, providing the same visual clue that you get in other programs.
 
    In addition to seeing the highlighting, new Emacs users often expect
 editing commands to replace the region when it is active.  This behavior
-can be obtained with `delete-selection-mode', but see the following
+can be obtained with ‘delete-selection-mode’, but see the following
 question also.
 
 
@@ -611,8 +600,8 @@ File: efaq-w32.info,  Node: CUA,  Prev: Highlight selection,  Up: Make Emacs lik
 The keybindings of Emacs predate modern GUIs, and the keys that were
 chosen by later GUIs for cut and copy were given important functions as
 extended keymaps in Emacs.  CUA mode attempts to let both bindings
-co-exist by defining C-x and C-c as `kill-region' and
-`copy-region-as-kill' when the region is active, and letting them have
+co-exist by defining C-x and C-c as ‘kill-region’ and
+‘copy-region-as-kill’ when the region is active, and letting them have
 their normal Emacs bindings when the region is not active.  Many people
 find this to be an acceptable compromise.  CUA mode also defines a
 number of other keys (C-v, Shift selection), and can be turned on from
@@ -624,11 +613,11 @@ File: efaq-w32.info,  Node: Window operations,  Next: Uninstall,  Prev: Make Ema
 3.11 Window operations
 ======================
 
-The function `w32-send-sys-command' can be used to simulate choosing
-commands from the system menu (in the top left corner of the Window)
-and a few other system wide functions.  It takes an integer argument,
-the value of which should be a valid `WM_SYSCOMMAND' message as
-documented in Microsoft's API documentation.
+The function ‘w32-send-sys-command’ can be used to simulate choosing
+commands from the system menu (in the top left corner of the Window) and
+a few other system wide functions.  It takes an integer argument, the
+value of which should be a valid ‘WM_SYSCOMMAND’ message as documented
+in Microsoft’s API documentation.
 
 
 File: efaq-w32.info,  Node: Uninstall,  Next: Does not run,  Prev: Window operations,  Up: Installing Emacs
@@ -638,14 +627,14 @@ File: efaq-w32.info,  Node: Uninstall,  Next: Does not run,  Prev: Window operat
 
 Emacs does not come with an uninstall program.  No files are installed
 outside of the Emacs base directory, so deleting that directory is
-sufficient to clean away the files.  If you ran `addpm', you'll need to
+sufficient to clean away the files.  If you ran ‘addpm’, you’ll need to
 delete the Start Menu group too.  The registry entries inserted by
-`addpm' will not cause any problems if you leave them there, but for
-the sake of completeness, you can use `regedit' to remove the keys
-under `HKEY_LOCAL_MACHINE' orx `HKEY_CURRENT_USER':
-`SOFTWARE\GNU\Emacs', and the key
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App
-Paths\emacs.exe' if it exists.
+‘addpm’ will not cause any problems if you leave them there, but for the
+sake of completeness, you can use ‘regedit’ to remove the keys under
+‘HKEY_LOCAL_MACHINE’ orx ‘HKEY_CURRENT_USER’: ‘SOFTWARE\GNU\Emacs’, and
+the key
+‘HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App
+Paths\emacs.exe’ if it exists.
 
 
 File: efaq-w32.info,  Node: Does not run,  Next: Virus,  Prev: Uninstall,  Up: Installing Emacs
@@ -653,25 +642,24 @@ File: efaq-w32.info,  Node: Does not run,  Next: Virus,  Prev: Uninstall,  Up: I
 3.13 When I run Emacs nothing happens
 =====================================
 
-Emacs could have failed to run for a number of reasons.  The most
-common symptom is that, when Emacs is started, the cursor changes for a
-second but nothing happens.  If this happens to you, it is quite likely
-that the distribution was unpacked incorrectly.
+Emacs could have failed to run for a number of reasons.  The most common
+symptom is that, when Emacs is started, the cursor changes for a second
+but nothing happens.  If this happens to you, it is quite likely that
+the distribution was unpacked incorrectly.
 
    Check for the following to see if there was a problem during
 unpacking:
   1. Be sure to disable the CR/LF translation or the executables will be
-     unusable.  Older versions of WinZipNT would enable this
-     translation by default.  If you are using WinZipNT, disable it.
-
+     unusable.  Older versions of WinZipNT would enable this translation
+     by default.  If you are using WinZipNT, disable it.
   2. Check that filenames were not truncated to 8.3.  For example, there
      should be a file CONTRIBUTE in the top level directory; if this has
      been truncated to CONTRIBU or CONTRI~1, your distribution has been
      corrupted while unpacking and Emacs will not start.
 
    If it is still not working, send mail to the list, describing what
-you've done, and what you are seeing. (The more information you send
-the more likely it is that you'll receive a helpful response..
+you’ve done, and what you are seeing.  (The more information you send
+the more likely it is that you’ll receive a helpful response..
 
 
 File: efaq-w32.info,  Node: Virus,  Next: Anti-virus,  Prev: Does not run,  Up: Installing Emacs
@@ -683,11 +671,11 @@ There have been reports in the past that some virus scanners claim that
 the Emacs distribution has a virus.  This is extremely unlikely if you
 have downloaded Emacs from the GNU FTP site or one of its mirrors and
 the GPG signature for it is valid and listed in the GNU keyring, unless
-perhaps it is a new release made in the last few days, in which case
-you should exercise more caution and report the problem.  Past problems
-seem to have been caused by virus checkers running into a buffer size
-limit when unpacking large tar.gz files for scanning, and reporting the
-failure as an "unknown virus".
+perhaps it is a new release made in the last few days, in which case you
+should exercise more caution and report the problem.  Past problems seem
+to have been caused by virus checkers running into a buffer size limit
+when unpacking large tar.gz files for scanning, and reporting the
+failure as an “unknown virus”.
 
 
 File: efaq-w32.info,  Node: Anti-virus,  Prev: Virus,  Up: Installing Emacs
@@ -698,7 +686,7 @@ File: efaq-w32.info,  Node: Anti-virus,  Prev: Virus,  Up: Installing Emacs
 Anti-virus and firewall software can block Emacs from starting
 subprocesses and opening network connections.  Most such products have
 an Advanced mode where they will prompt you rather than silently
-blocking.  In some cases the "scan all files" or "auto protect" option
+blocking.  In some cases the “scan all files” or “auto protect” option
 of anti-virus programs has caused failures running shell related
 commands within Emacs.  *Note Why is nothing happening when I enter
 shell commands?: Sub-processes.
@@ -723,12 +711,12 @@ File: efaq-w32.info,  Node: Console window size,  Next: Mouse trouble,  Up: Disp
 4.1 Emacs in console mode goes beyond the window size
 =====================================================
 
-The variable `w32-use-full-screen-buffer' controls whether Emacs uses
+The variable ‘w32-use-full-screen-buffer’ controls whether Emacs uses
 the window size or buffer size to determine the number of lines on
 screen.  Normally the window size is correct, but when running Emacs
-over some telnet servers, the buffer size needs to be used.  Emacs
-tries to guess the correct value at startup, but if it guesses wrong,
-you can customize that variable yourself.
+over some telnet servers, the buffer size needs to be used.  Emacs tries
+to guess the correct value at startup, but if it guesses wrong, you can
+customize that variable yourself.
 
 
 File: efaq-w32.info,  Node: Mouse trouble,  Next: Cut and paste NUL,  Prev: Console window size,  Up: Display Settings
@@ -739,9 +727,9 @@ File: efaq-w32.info,  Node: Mouse trouble,  Next: Cut and paste NUL,  Prev: Cons
 Emacs assigns bindings assuming a three button mouse.  On Windows, if a
 two button mouse is detected, a hack is enabled which lets you simulate
 the third button by pressing both mouse buttons simultaneously.
-`w32-mouse-button-tolerance' defines the timeout for what is considered
-"simultaneous".  You can check how many buttons Emacs thinks your mouse
-has with `C-h v' `w32-num-mouse-buttons'.
+‘w32-mouse-button-tolerance’ defines the timeout for what is considered
+“simultaneous”.  You can check how many buttons Emacs thinks your mouse
+has with ‘C-h v’ ‘w32-num-mouse-buttons’.
 
    If you find yourself needing the mouse-3 bindings more often than
 mouse-2, you can swap the buttons with the following code in your init
@@ -765,9 +753,9 @@ File: efaq-w32.info,  Node: Garbled clipboard,  Next: Beep sound,  Prev: Cut and
 4.4 How can I fix garbled text yanked from the clipboard?
 =========================================================
 
-You can try `set-selection-coding-system', but generally such
-corruption is a thing of the past, as Emacs uses Unicode for the
-clipboard by default now.
+You can try ‘set-selection-coding-system’, but generally such corruption
+is a thing of the past, as Emacs uses Unicode for the clipboard by
+default now.
 
 
 File: efaq-w32.info,  Node: Beep sound,  Prev: Garbled clipboard,  Up: Display Settings
@@ -775,9 +763,9 @@ File: efaq-w32.info,  Node: Beep sound,  Prev: Garbled clipboard,  Up: Display S
 4.5 How do I change the sound of the Emacs beep?
 ================================================
 
-You can use the function `set-message-beep' to change the sound that
-Emacs uses for its beep.  This affects both console and GUI frames.
-The doc string contains a list of the system sounds you can use.
+You can use the function ‘set-message-beep’ to change the sound that
+Emacs uses for its beep.  This affects both console and GUI frames.  The
+doc string contains a list of the system sounds you can use.
 
 
 File: efaq-w32.info,  Node: Fonts and text translation,  Next: Printing,  Prev: Display Settings,  Up: Top
@@ -801,9 +789,9 @@ File: efaq-w32.info,  Node: Font names,  Next: Bold and italic,  Up: Fonts and t
 ==============
 
 Fonts in Emacs 22 and earlier are named using the X Logical Font
-Description (XLFD) format.  Emacs on Windows ignores many of the
-fields, and populates them with * when listing fonts.  Former
-maintainer Andrew Innes wrote this explanation
+Description (XLFD) format.  Emacs on Windows ignores many of the fields,
+and populates them with * when listing fonts.  Former maintainer Andrew
+Innes wrote this explanation
 (http://www.gnu.org/software/emacs/windows/ntemacs/discuss/x-font-details)
 of what each field in the font string means and how Emacs treated them
 back in 19.34.  Since then, multilingual support and a redisplay
@@ -824,18 +812,18 @@ to be supported for backward compatibility.
      Fontconfig: Courier New-13
 
    To find the XFLD name for a font, you can execute the following in
-the `*scratch*' buffer by pressing C-j at the end of the line:
+the ‘*scratch*’ buffer by pressing C-j at the end of the line:
      (w32-select-font nil t)
 
    To see a complete list of fonts, execute the following in the
-`*scratch*' buffer by pressing C-x C-e at the end of the line:
+‘*scratch*’ buffer by pressing C-x C-e at the end of the line:
      (insert (prin1-to-string (x-list-fonts "*")))
 
    The command line options and frame-parameters for changing the
 default font in Emacs are documented in the manual.  Fonts can also be
-used when defining faces, though family and size are generally
-specified individually there.  In addition, Emacs on Windows reads the
-registry to find X Resources.  This is also documented in the manual.
+used when defining faces, though family and size are generally specified
+individually there.  In addition, Emacs on Windows reads the registry to
+find X Resources.  This is also documented in the manual.
 
 
 File: efaq-w32.info,  Node: Bold and italic,  Next: Multilingual fonts,  Prev: Font names,  Up: Fonts and text translation
@@ -877,16 +865,16 @@ File: efaq-w32.info,  Node: Language display,  Next: Non-latin display,  Up: Mul
 ------------------------------------------------------------
 
 To display all the languages that Emacs is capable of displaying, you
-will require the BDF fonts from the GNU intlfonts package.  *Note How
-do I use bdf fonts with Emacs?: Fonts and text translation.
+will require the BDF fonts from the GNU intlfonts package.  *Note How do
+I use bdf fonts with Emacs?: Fonts and text translation.
 
    For many languages, native truetype fonts are sufficient, and in
-Emacs 23 the need for BDF fonts will disappear for almost all
-languages.  At the time of writing, some Arabic characters in the HELLO
-file still do not display with native fonts, because they are
-pre-composed characters from MULE character sets rather than standard
-Unicode Arabic, but all other characters are able to be displayed with
-appropriate truetype or opentype fonts.
+Emacs 23 the need for BDF fonts will disappear for almost all languages.
+At the time of writing, some Arabic characters in the HELLO file still
+do not display with native fonts, because they are pre-composed
+characters from MULE character sets rather than standard Unicode Arabic,
+but all other characters are able to be displayed with appropriate
+truetype or opentype fonts.
 
 
 File: efaq-w32.info,  Node: Non-latin display,  Next: International fonts,  Prev: Language display,  Up: Multilingual fonts
@@ -897,8 +885,8 @@ File: efaq-w32.info,  Node: Non-latin display,  Next: International fonts,  Prev
 Recent versions of Emacs display a large range of characters out of the
 box, but if you are having problems with a particular character set
 which you know you have fonts for, you can try defining a new fontset
-with `create-fontset-from-ascii-font' or
-`create-fontset-from-fontset-spec'.
+with ‘create-fontset-from-ascii-font’ or
+‘create-fontset-from-fontset-spec’.
 
      (create-fontset-from-fontset-spec
       "-*-Courier New-normal-r-*-*-12-*-*-*-c-*-fontset-most,
@@ -941,10 +929,10 @@ You probably only need to do this on the non-Unicode versions of Windows
 (95, 98 and ME), and even then, various Windows and Internet Explorer
 updates have made third party software unnecessary in most cases.  If
 you are having trouble displaying text, try defining a fontset with the
-font for the languages that the third party software handles set to
-what that software expects (which may not be an appropriate font for
-that language, but the third party software is intercepting it and
-using a different font behind the scenes).  *Note Non-latin display::.
+font for the languages that the third party software handles set to what
+that software expects (which may not be an appropriate font for that
+language, but the third party software is intercepting it and using a
+different font behind the scenes).  *Note Non-latin display::.
 
    In addition to defining a fontset with the expected font, you may
 also need to disable unicode output with:
@@ -956,7 +944,7 @@ File: efaq-w32.info,  Node: Localized fonts,  Prev: Third-party multibyte,  Up: 
 5.3.5 Can I use a font with a name in my language?
 --------------------------------------------------
 
-Normally Emacs should initialize `locale-coding-system' appropriately
+Normally Emacs should initialize ‘locale-coding-system’ appropriately
 based on your locale, which will let Emacs use font names in your local
 language successfully.
 
@@ -967,16 +955,16 @@ File: efaq-w32.info,  Node: BDF fonts,  Next: Font menu,  Prev: Multilingual fon
 ======================================
 
 To use bdf fonts with Emacs, you need to tell Emacs where the fonts are
-located, create fontsets for them, and then use them.  We'll use the 16
+located, create fontsets for them, and then use them.  We’ll use the 16
 dot international fonts from ftp.gnu.org/gnu/intlfonts
-(http://ftpmirror.gnu.org/intlfonts) as an example put together by
-Jason Rumney.
+(http://ftpmirror.gnu.org/intlfonts) as an example put together by Jason
+Rumney.
 
-   Download `16dots.tar.gz' and unpack it; I'll assume that they are in
-`c:\intlfonts'.  Then set `w32-bdf-filename-alist' to the list of fonts
-returned by using `w32-find-bdf-fonts' to enumerate all of the font
-files.  It is a good idea to set the variable `bdf-directory-list' at
-the same time so `ps-print' knows where to find the fonts:
+   Download ‘16dots.tar.gz’ and unpack it; I’ll assume that they are in
+‘c:\intlfonts’.  Then set ‘w32-bdf-filename-alist’ to the list of fonts
+returned by using ‘w32-find-bdf-fonts’ to enumerate all of the font
+files.  It is a good idea to set the variable ‘bdf-directory-list’ at
+the same time so ‘ps-print’ knows where to find the fonts:
      (setq bdf-directory-list
            '("c:/intlfonts/Asian" "c:/intlfonts/Chinese"
              "c:/intlfonts/Chinese-X" "c:/intlfonts/Ethiopic"
@@ -1016,14 +1004,14 @@ therefore need to be added to font-encoding-alist:
                      ("MuleArabic-1"  (arabic-1-column . 0))
                      ("MuleArabic-2"  (arabic-2-column . 0))) font-encoding-alist))
 
-   You can now use the Emacs font menu (*note How can I have Emacs use
-a font menu like on X?: Fonts and text translation.) to select the
-_bdf: 16-dot medium_ fontset, or you can select it by setting the
-default font:
+   You can now use the Emacs font menu (*note How can I have Emacs use a
+font menu like on X?: Fonts and text translation.) to select the _bdf:
+16-dot medium_ fontset, or you can select it by setting the default
+font:
 
          (set-frame-font "fontset-bdf")
 
-   Try loading the file `etc/HELLO', and you should be able to see the
+   Try loading the file ‘etc/HELLO’, and you should be able to see the
 various international fonts displayed (except for Hindi, which is not
 included in the 16-dot font distribution).
 
@@ -1047,8 +1035,8 @@ File: efaq-w32.info,  Node: Add fonts to menu,  Up: Font menu
 5.5.1 How can I add my font to the font menu?
 ---------------------------------------------
 
-If you have set w32-use-w32-font-dialog to `nil', you can add fonts to
-the font menu by changing `w32-fixed-font-alist'.  For example:
+If you have set w32-use-w32-font-dialog to ‘nil’, you can add fonts to
+the font menu by changing ‘w32-fixed-font-alist’.  For example:
 
      (setq w32-fixed-font-alist
         (append w32-fixed-font-alist
@@ -1086,10 +1074,10 @@ File: efaq-w32.info,  Node: Automatic line ends,  Next: Line ends by filename,  
 For existing files, Emacs scans the file to determine the line ending
 convention as part of the same scan it does to determine the file
 encoding.  Embedded Ctrl-M (ASCII 13) characters and inconsistent line
-ends can confuse the automatic scanning, and Emacs will present the
-file in Unix (LF) mode with the Ctrl-M characters displayed as `^M'.
-It does this to be safe, as no data loss will occur if the file is
-really binary and the Ctrl-M characters are significant.
+ends can confuse the automatic scanning, and Emacs will present the file
+in Unix (LF) mode with the Ctrl-M characters displayed as ‘^M’.  It does
+this to be safe, as no data loss will occur if the file is really binary
+and the Ctrl-M characters are significant.
 
 
 File: efaq-w32.info,  Node: Line ends by filename,  Next: Line ends by file system,  Prev: Automatic line ends,  Up: Line ends
@@ -1097,13 +1085,12 @@ File: efaq-w32.info,  Node: Line ends by filename,  Next: Line ends by file syst
 5.6.2 CR/LF translation by file extension
 -----------------------------------------
 
-The variable `file-name-buffer-file-type-alist' holds a list of
-filename patterns and their associated type; binary or text.  Files
-marked as binary will not have line-end detection performed on them,
-and instead will always be displayed as is.  With auto-detection in
-recent versions of Emacs, this is seldom useful for existing files, but
-can still be used to influence the choice of line ends for newly
-created files.
+The variable ‘file-name-buffer-file-type-alist’ holds a list of filename
+patterns and their associated type; binary or text.  Files marked as
+binary will not have line-end detection performed on them, and instead
+will always be displayed as is.  With auto-detection in recent versions
+of Emacs, this is seldom useful for existing files, but can still be
+used to influence the choice of line ends for newly created files.
 
 
 File: efaq-w32.info,  Node: Line ends by file system,  Prev: Line ends by filename,  Up: Line ends
@@ -1111,13 +1098,13 @@ File: efaq-w32.info,  Node: Line ends by file system,  Prev: Line ends by filena
 5.6.3 CR/LF translation by file system
 --------------------------------------
 
-The variable `untranslated-filesystem-list' defines whole directory
+The variable ‘untranslated-filesystem-list’ defines whole directory
 trees that should not have CR/LF autodetection performed on them.  The
-list can be manipulated with the functions
-`add-untranslated-filesystem' and `remove-untranslated-filesystem'.
-With auto-detection in recent versions of Emacs, this is seldom useful
-for existing files, but can still be used to influence the choice of
-line ends for newly created files.
+list can be manipulated with the functions ‘add-untranslated-filesystem’
+and ‘remove-untranslated-filesystem’.  With auto-detection in recent
+versions of Emacs, this is seldom useful for existing files, but can
+still be used to influence the choice of line ends for newly created
+files.
 
 
 File: efaq-w32.info,  Node: Printing,  Next: Sub-processes,  Prev: Fonts and text translation,  Up: Top
@@ -1125,11 +1112,11 @@ File: efaq-w32.info,  Node: Printing,  Next: Sub-processes,  Prev: Fonts and tex
 6 Printing
 **********
 
-A lot of effort has gone into making it easier to print from Emacs on
-MS Windows, but this has still been insufficient to keep up with
-changes in printing technology from text and postscript based printers
-connected via ports that can be accessed directly, to graphical
-printers that are only accessible via USB.  For details, see Emacs Wiki
+A lot of effort has gone into making it easier to print from Emacs on MS
+Windows, but this has still been insufficient to keep up with changes in
+printing technology from text and postscript based printers connected
+via ports that can be accessed directly, to graphical printers that are
+only accessible via USB. For details, see Emacs Wiki
 (http://www.emacswiki.org/cgi-bin/wiki/PrintingFromEmacs).
 
 
@@ -1173,18 +1160,18 @@ File: efaq-w32.info,  Node: Subprocess hang,  Next: Subprocess buffering,  Prev:
 7.2 Programs reading input hang
 ===============================
 
-Programs that explicitly use a handle to the console (`CON' or `CON:')
-instead of stdin and stdout cannot be used as subprocesses to Emacs,
-and they will also not work in shell-mode.  The default ftp client on
+Programs that explicitly use a handle to the console (‘CON’ or ‘CON:’)
+instead of stdin and stdout cannot be used as subprocesses to Emacs, and
+they will also not work in shell-mode.  The default ftp client on
 Windows is an example of such a program - this ftp program is mostly
-fine for use with `ange-ftp' or `tramp', but not for `M-x ftp' (*note
-How do I use FTP within Emacs: Network access.).  There is no
-convenient way for either Emacs or any shell used in `shell-mode' to
-redirect the input and output of such processes from the console to
-input and output pipes.  The only workaround is to use a different
-implementation of the program that does not use the console directly.
-Microsoft's new PowerShell appears to be another such program, so that
-cannot be used as a replacement shell for Emacs.
+fine for use with ‘ange-ftp’ or ‘tramp’, but not for ‘M-x ftp’ (*note
+How do I use FTP within Emacs: Network access.).  There is no convenient
+way for either Emacs or any shell used in ‘shell-mode’ to redirect the
+input and output of such processes from the console to input and output
+pipes.  The only workaround is to use a different implementation of the
+program that does not use the console directly.  Microsoft’s new
+PowerShell appears to be another such program, so that cannot be used as
+a replacement shell for Emacs.
 
 
 File: efaq-w32.info,  Node: Subprocess buffering,  Next: Subprocesses and floppy drive,  Prev: Subprocess hang,  Up: Sub-processes
@@ -1192,15 +1179,15 @@ File: efaq-w32.info,  Node: Subprocess buffering,  Next: Subprocesses and floppy
 7.3 Buffering in shells and subprocesses
 ========================================
 
-You may notice that some programs, when run in a shell in `shell-mode',
+You may notice that some programs, when run in a shell in ‘shell-mode’,
 have their output buffered (e.g., people have found this happening to
-them with `sql-mode').  When the program has a lot of output, it
+them with ‘sql-mode’).  When the program has a lot of output, it
 overflows the buffering and gets printed to the shell buffer; however,
 if the program only outputs a small amount of text, it will remain
-buffered and won't appear in the shell buffer.  The same can happen in
+buffered and won’t appear in the shell buffer.  The same can happen in
 other subprocesses that themselves run other programs as subprocesses,
-for example when using `cvs' from Emacs, which is itself configured to
-use `ssh', password prompts fail to appear when expected, and `cvs'
+for example when using ‘cvs’ from Emacs, which is itself configured to
+use ‘ssh’, password prompts fail to appear when expected, and ‘cvs’
 appears to hang.
 
    Although it may at first seem like the shell is buffering the output
@@ -1213,13 +1200,13 @@ device, such as a file, output is buffered block by block.
    In a shell buffer, stdout is a pipe handle and so is buffered in
 blocks.  If you would like the buffering behavior of your program to
 behave differently, the program itself is going to have to be changed;
-you can use `setbuf' and `setvbuf' to manipulate the buffering
+you can use ‘setbuf’ and ‘setvbuf’ to manipulate the buffering
 semantics.
 
    Some programs handle this by having an explicit flag to control their
-buffering behavior, typically `-i' for interactive.  Other programs
+buffering behavior, typically ‘-i’ for interactive.  Other programs
 manage to detect that they are running under Emacs, by using
-`getenv("emacs")' internally.
+‘getenv("emacs")’ internally.
 
 * Menu:
 
@@ -1244,9 +1231,9 @@ File: efaq-w32.info,  Node: Subprocesses and floppy drive,  Next: Killing subpro
 7.4 16-bit subprocesses accessing the floppy drive
 ==================================================
 
-If you are finding the 16 bit DOS subprocesses cause your A: drive to
-be accessed, hanging Emacs until the read times out if there is no
-floppy in the drive, check to see if your virus software is causing the
+If you are finding the 16 bit DOS subprocesses cause your A: drive to be
+accessed, hanging Emacs until the read times out if there is no floppy
+in the drive, check to see if your virus software is causing the
 problem.
 
 
@@ -1262,9 +1249,9 @@ completion including explicitly exiting shells before killing the
 associated buffer.
 
    If you find that while shutting down, Windows complains that there is
-a running `cmdproxy.exe' even though you carefully exited all shells
-and none were showing in Task Manager before the shutdown, this could
-be due to buggy interaction with your virus scanner.
+a running ‘cmdproxy.exe’ even though you carefully exited all shells and
+none were showing in Task Manager before the shutdown, this could be due
+to buggy interaction with your virus scanner.
 
 
 File: efaq-w32.info,  Node: Subprocess EOF,  Next: Using shell,  Prev: Killing subprocesses,  Up: Sub-processes
@@ -1272,10 +1259,10 @@ File: efaq-w32.info,  Node: Subprocess EOF,  Next: Using shell,  Prev: Killing s
 7.6 Sending EOF to subprocesses
 ===============================
 
-When an EOF is sent to a subprocess running in an interactive shell
-with `process-send-eof', the shell terminates unexpectedly as if its
-input was closed.  This affects the use of `C-c C-d' in shell buffers.
-See this discussion
+When an EOF is sent to a subprocess running in an interactive shell with
+‘process-send-eof’, the shell terminates unexpectedly as if its input
+was closed.  This affects the use of ‘C-c C-d’ in shell buffers.  See
+this discussion
 (http://www.gnu.org/software/emacs/windows/ntemacs/todo/shell-ctrl-d)
 for more details.
 
@@ -1285,13 +1272,13 @@ File: efaq-w32.info,  Node: Using shell,  Next: Cygwin paths,  Prev: Subprocess 
 7.7 How do I use a shell in Emacs?
 ==================================
 
-You can start an interactive shell in Emacs by typing `M-x shell'.
-Emacs uses the `SHELL' environment variable to determine which program
+You can start an interactive shell in Emacs by typing ‘M-x shell’.
+Emacs uses the ‘SHELL’ environment variable to determine which program
 to use as the shell.  To instruct Emacs to use a non-default shell, you
 can either set this environment variable, or customize
-`explicit-shell-file-name'.  You can also customize `shell-file-name'
-to change the shell that will be used by subprocesses that are started
-with `shell-command' and related non-interactive shell commands.
+‘explicit-shell-file-name’.  You can also customize ‘shell-file-name’ to
+change the shell that will be used by subprocesses that are started with
+‘shell-command’ and related non-interactive shell commands.
 
 * Menu:
 
@@ -1318,15 +1305,15 @@ default shell in Emacs, you can place the following in your init file:
      (add-hook 'shell-mode-hook 'my-shell-setup)
 
    If you find that you are having trouble with Emacs tracking drive
-changes with bash, see Mike Fabian's note
+changes with bash, see Mike Fabian’s note
 (http://www.gnu.org/software/emacs/windows/ntemacs/discuss/drive-tracking).
 
    WARNING: Some versions of bash set and use the environment variable
-PID.  For some as yet unknown reason, if `PID' is set and Emacs passes
-it on to bash subshells, bash dies (Emacs can inherit the `PID'
-variable if it's started from a bash shell).  If you clear the `PID'
-variable in your init file, you should be able to continue to use bash
-as your subshell:
+PID. For some as yet unknown reason, if ‘PID’ is set and Emacs passes it
+on to bash subshells, bash dies (Emacs can inherit the ‘PID’ variable if
+it’s started from a bash shell).  If you clear the ‘PID’ variable in
+your init file, you should be able to continue to use bash as your
+subshell:
          (setenv "PID" nil)
 
 
@@ -1345,10 +1332,10 @@ File: efaq-w32.info,  Node: Dired ls,  Next: Shell echo,  Prev: Cygwin paths,  U
 7.9 How do I make dired use my ls program?
 ==========================================
 
-Dired uses an internal lisp implementation of `ls' by default on
-Windows.  For consistent display of symbolic links and other
-information with other programs (eg Cygwin) and performance reasons,
-you may want to use a Windows port of `ls' instead.
+Dired uses an internal lisp implementation of ‘ls’ by default on
+Windows.  For consistent display of symbolic links and other information
+with other programs (eg Cygwin) and performance reasons, you may want to
+use a Windows port of ‘ls’ instead.
 
      (setq ls-lisp-use-insert-directory-program t)      ;; use external ls
      (setq insert-directory-program "c:/cygwin/bin/ls") ;; ls program name
@@ -1361,7 +1348,7 @@ File: efaq-w32.info,  Node: Shell echo,  Next: Shell completion forward slash,  
 
 Some shells echo the commands that you send to them, and the echoed
 commands appear in the output buffer.  In particular, the default
-shells, `command.com' and `cmd.exe', have this behavior.
+shells, ‘command.com’ and ‘cmd.exe’, have this behavior.
 
    To prevent echoed commands from being printed, you can place the
 following in your init file:
@@ -1370,25 +1357,25 @@ following in your init file:
            (setq comint-process-echoes t))
          (add-hook 'comint-mode-hook 'my-comint-init)
 
-   If `shell-mode' still is not stripping echoed commands, then you'll
-have to explicitly tell the shell to not echo commands.  You can do
-this by setting the `explicit-SHELL-args' variable appropriately; where
-SHELL is the value of your `SHELL' environment variable (do a `M-:
-(getenv "SHELL")' to see what it is currently set to).  Assuming that
-you are on NT and that your `SHELL' environment variable is set to
-`cmd.exe', then placing the following in your init file will tell
-`cmd.exe' to not echo commands:
+   If ‘shell-mode’ still is not stripping echoed commands, then you’ll
+have to explicitly tell the shell to not echo commands.  You can do this
+by setting the ‘explicit-SHELL-args’ variable appropriately; where SHELL
+is the value of your ‘SHELL’ environment variable (do a ‘M-: (getenv
+"SHELL")’ to see what it is currently set to).  Assuming that you are on
+NT and that your ‘SHELL’ environment variable is set to ‘cmd.exe’, then
+placing the following in your init file will tell ‘cmd.exe’ to not echo
+commands:
 
          (setq explicit-cmd.exe-args '("/q"))
 
    The comint package will use the value of this variable as an argument
-to `cmd.exe' every time it starts up a new shell; the `/q' is the
-argument to `cmd.exe' that stops the echoing (invoking `cmd /?' in a
-shell will show you all of the command line arguments to `cmd.exe').
+to ‘cmd.exe’ every time it starts up a new shell; the ‘/q’ is the
+argument to ‘cmd.exe’ that stops the echoing (invoking ‘cmd /?’ in a
+shell will show you all of the command line arguments to ‘cmd.exe’).
 
    Note that this variable is case sensitive; if the value of your
-`SHELL' environment variable is `CMD.EXE' instead, then this variable
-needs to be named `explicit-CMD.EXE-args' instead.
+‘SHELL’ environment variable is ‘CMD.EXE’ instead, then this variable
+needs to be named ‘explicit-CMD.EXE-args’ instead.
 
 
 File: efaq-w32.info,  Node: Shell completion forward slash,  Next: Incorrect DOS version,  Prev: Shell echo,  Up: Sub-processes
@@ -1397,8 +1384,8 @@ File: efaq-w32.info,  Node: Shell completion forward slash,  Next: Incorrect DOS
 =========================================================
 
 The character appended to directory names when completing in a shell
-buffer is controlled by the variable `comint-completion-addsuffix'.
-See its documentation (with `C-h v') for details.
+buffer is controlled by the variable ‘comint-completion-addsuffix’.  See
+its documentation (with ‘C-h v’) for details.
 
 
 File: efaq-w32.info,  Node: Incorrect DOS version,  Next: Shell commands do nothing,  Prev: Shell completion forward slash,  Up: Sub-processes
@@ -1406,17 +1393,17 @@ File: efaq-w32.info,  Node: Incorrect DOS version,  Next: Shell commands do noth
 7.12 Why do I get incorrect DOS version messages?
 =================================================
 
-This might happen if, for example, you invoke `nmake' in a shell and it
+This might happen if, for example, you invoke ‘nmake’ in a shell and it
 tries to create sub-shells.  The problem happens because when the shell
 is initially created, the first argument to the shell is not the
 directory in which the shell program resides.  When this happens,
-`command.com' fabricates a value for its `COMSPEC' environment variable
-that is incorrect.  Then, when other programs go to use `COMSPEC' to
+‘command.com’ fabricates a value for its ‘COMSPEC’ environment variable
+that is incorrect.  Then, when other programs go to use ‘COMSPEC’ to
 find the shell, they are given the wrong value.
 
    The fix for this is to either prevent any arguments from being sent
-to the shell when it starts up (in which case `command.com' will use a
-default, and correct, value for `COMSPEC'), or to have the first
+to the shell when it starts up (in which case ‘command.com’ will use a
+default, and correct, value for ‘COMSPEC’), or to have the first
 argument be the directory in which the shell executable resides.
 
 
@@ -1425,10 +1412,10 @@ File: efaq-w32.info,  Node: Shell commands do nothing,  Prev: Incorrect DOS vers
 7.13 Why is nothing happening when I enter shell commands?
 ==========================================================
 
-Some anti-virus software has been reported to cause problems with
-shells in the past.  Try turning off options such as "Scan all files".
-*Note What known problems are there with anti-virus software?:
-Installing Emacs.
+Some anti-virus software has been reported to cause problems with shells
+in the past.  Try turning off options such as “Scan all files”.  *Note
+What known problems are there with anti-virus software?: Installing
+Emacs.
 
 
 File: efaq-w32.info,  Node: Network access,  Next: Text and Utility modes,  Prev: Sub-processes,  Up: Top
@@ -1470,9 +1457,9 @@ File: efaq-w32.info,  Node: Outgoing mail,  Next: Incoming mail with Rmail,  Up:
 8.1.1 Outgoing mail
 -------------------
 
-For outgoing mail, you will need to use `smtpmail.el' which allows
-Emacs to talk directly to SMTP mail servers.  This is included with
-Emacs, and can be set up as follows:
+For outgoing mail, you will need to use ‘smtpmail.el’ which allows Emacs
+to talk directly to SMTP mail servers.  This is included with Emacs, and
+can be set up as follows:
 
      (setq user-full-name "YOUR FULL NAME")
      (setq user-mail-address "YOUR@EMAIL.ADDRESS")
@@ -1482,11 +1469,11 @@ Emacs, and can be set up as follows:
      (setq message-send-mail-function 'smtpmail-send-it) ; For message-mode (Gnus)
 
    Note that if you want to change the name of the SMTP server after
-smtpmail is loaded, then you'll need to change `smtpmail-smtp-server'.
+smtpmail is loaded, then you’ll need to change ‘smtpmail-smtp-server’.
 
    If you are experiencing problems with sending large messages, check
-the value of the variable `smtpmail-debug-info'. If it is non-`nil',
-you should set it to `nil':
+the value of the variable ‘smtpmail-debug-info’.  If it is non-‘nil’,
+you should set it to ‘nil’:
 
 
 File: efaq-w32.info,  Node: Incoming mail with Rmail,  Next: Incoming mail with Gnus,  Prev: Outgoing mail,  Up: Mail
@@ -1507,10 +1494,10 @@ File: efaq-w32.info,  Node: Incoming mail with Gnus,  Next: Incoming mail other,
 8.1.3 Incoming mail with Gnus
 -----------------------------
 
-Although Gnus started life as a Usenet news reader, it also makes a
-good mail reader, particularly if you subscribe to a lot of mailing
-lists, or you want to use IMAP rather than POP3, which is not supported
-by Rmail.  *Note The Gnus manual: (gnus)Top.
+Although Gnus started life as a Usenet news reader, it also makes a good
+mail reader, particularly if you subscribe to a lot of mailing lists, or
+you want to use IMAP rather than POP3, which is not supported by Rmail.
+*Note The Gnus manual: (gnus)Top.
 
 
 File: efaq-w32.info,  Node: Incoming mail other,  Prev: Incoming mail with Gnus,  Up: Mail
@@ -1529,12 +1516,12 @@ File: efaq-w32.info,  Node: Attachments with Gnus,  Next: Using FTP,  Prev: Mail
 8.2 How do I open attachments in Gnus?
 ======================================
 
-In your `HOME' directory create a file called `.mailcap', with contents
+In your ‘HOME’ directory create a file called ‘.mailcap’, with contents
 like the following:
      application/zip "C:/Program Files/7-Zip/7zFM.exe"
      video/* "C:/Program Files/VideoLAN/VLC/vlc.exe"
 
-   *Warning:* Associating MIME types with `start' or other generic
+   *Warning:* Associating MIME types with ‘start’ or other generic
 Windows commands to open arbitrary files might seem like a good idea,
 but it leaves your system as open to attack as Outlook Express was at
 its worst.  Especially dangerous is associating application/* or */* in
@@ -1553,9 +1540,9 @@ remote file access package for Emacs that is enabled by default.
    The Windows FTP client does have problems with some firewalls, due to
 lack of passive mode support, so you may want to try an alternative ftp
 client instead.  Make sure that the client you are trying is in your
-`PATH' before the default Windows client, or rename the default Windows
+‘PATH’ before the default Windows client, or rename the default Windows
 client to avoid it getting in the way.  Alternatively you can customize
-`ange-ftp-ftp-program-name' to the full path to the version you are
+‘ange-ftp-ftp-program-name’ to the full path to the version you are
 trying.  *Note Other useful ports::.
 
 
@@ -1565,21 +1552,19 @@ File: efaq-w32.info,  Node: Tramp ssh,  Next: telnet,  Prev: Using FTP,  Up: Net
 ================================================
 
 Tramp can use a number of protocols to connect to remote machines to
-read files and even run commands on those files remotely.  A popular
-one is ssh.  As well as Cygwin versions of openssh, you can use PuTTY's
+read files and even run commands on those files remotely.  A popular one
+is ssh.  As well as Cygwin versions of openssh, you can use PuTTY’s
 command line plink program as the ssh client.  The relevant methods to
-use in `tramp-default-method' or `tramp-default-method-alist' for these
+use in ‘tramp-default-method’ or ‘tramp-default-method-alist’ for these
 options are:
      openssh
-        * `scp' Uses scp for copying, ssh for shell operations.
-
-        * `ssh' Uses ssh with encoding on stdin/stdout for file
+        • ‘scp’ Uses scp for copying, ssh for shell operations.
+        • ‘ssh’ Uses ssh with encoding on stdin/stdout for file
           transfer.
 
      PuTTY
-        * `pscp' Uses pscp for copying, plink for shell operations.
-
-        * `plink' Uses plink with encoding on stdin/stdout for file
+        • ‘pscp’ Uses pscp for copying, plink for shell operations.
+        • ‘plink’ Uses plink with encoding on stdin/stdout for file
           transfer.
 
 
@@ -1590,9 +1575,9 @@ File: efaq-w32.info,  Node: telnet,  Prev: Tramp ssh,  Up: Network access
 
 To use telnet-mode on Windows, you need a telnet client that uses stdin
 and stdout for input and output.  The default Windows client is a
-Windows application, and will not work as a subprocess.  Several
-options exist, but information that was formerly in this FAQ is out of
-date now, so no concrete pointers are available.
+Windows application, and will not work as a subprocess.  Several options
+exist, but information that was formerly in this FAQ is out of date now,
+so no concrete pointers are available.
 
 
 File: efaq-w32.info,  Node: Text and Utility modes,  Next: Developing with Emacs,  Prev: Network access,  Up: Top
@@ -1640,16 +1625,16 @@ File: efaq-w32.info,  Node: Spell check,  Next: Encryption,  Prev: TeX,  Up: Tex
 9.2 How do I perform spell checks?
 ==================================
 
-Emacs has support for spell checking on demand (`ispell') and as your
-type (`flyspell').  Both packages depend on a copy of `ispell' 3.2 or a
-compatible spell-checking program.  GNU Aspell is a popular choice
-these days, Windows installers are available from the official site
+Emacs has support for spell checking on demand (‘ispell’) and as your
+type (‘flyspell’).  Both packages depend on a copy of ‘ispell’ 3.2 or a
+compatible spell-checking program.  GNU Aspell is a popular choice these
+days, Windows installers are available from the official site
 (http://aspell.net/win32/).
 
-   Once installed, you will need to configure `ispell-program-name' to
-tell ispell and flyspell to use `aspell' as a replacement for ispell.
-You can include the full path to the `aspell' binary, which means you
-do not need to add its installation directory to the `PATH'.
+   Once installed, you will need to configure ‘ispell-program-name’ to
+tell ispell and flyspell to use ‘aspell’ as a replacement for ispell.
+You can include the full path to the ‘aspell’ binary, which means you do
+not need to add its installation directory to the ‘PATH’.
 
 
 File: efaq-w32.info,  Node: Encryption,  Next: Mouse wheel,  Prev: Spell check,  Up: Text and Utility modes
@@ -1658,22 +1643,22 @@ File: efaq-w32.info,  Node: Encryption,  Next: Mouse wheel,  Prev: Spell check, 
 ========================
 
 GNU Privacy Guard is a Free replacement for PGP, with Windows binaries
-available.  See `http://www.gnupg.org/'.
+available.  See <http://www.gnupg.org/>.
 
 
 File: efaq-w32.info,  Node: Mouse wheel,  Next: Grep,  Prev: Encryption,  Up: Text and Utility modes
 
-9.4 Why doesn't my wheel mouse work in Emacs?
+9.4 Why doesn’t my wheel mouse work in Emacs?
 =============================================
 
-Some wheel mice ship with default settings that do not send the
-standard wheel events to programs, but instead try to simulate scroll
-bar events.  Usually this is configurable from the hardware specific
-pages on the mouse control panel.  The middle button is often mapped in
-the same settings to have some functionality other than sending middle
-mouse button events.  In some cases, uninstalling the manufacturer's
-drivers and telling Windows to use the generic USB or PS/2 drivers is
-the only way to make the mouse work properly.
+Some wheel mice ship with default settings that do not send the standard
+wheel events to programs, but instead try to simulate scroll bar events.
+Usually this is configurable from the hardware specific pages on the
+mouse control panel.  The middle button is often mapped in the same
+settings to have some functionality other than sending middle mouse
+button events.  In some cases, uninstalling the manufacturer’s drivers
+and telling Windows to use the generic USB or PS/2 drivers is the only
+way to make the mouse work properly.
 
 
 File: efaq-w32.info,  Node: Grep,  Prev: Mouse wheel,  Up: Text and Utility modes
@@ -1681,13 +1666,13 @@ File: efaq-w32.info,  Node: Grep,  Prev: Mouse wheel,  Up: Text and Utility mode
 9.5 How do I use grep with Emacs?
 =================================
 
-The best way to use `M-x grep' with Emacs is to download a port of GNU
-`grep'. *Note Other useful ports::.
+The best way to use ‘M-x grep’ with Emacs is to download a port of GNU
+‘grep’.  *Note Other useful ports::.
 
    If you want a quick solution without installing extra tools, a poor
 substitute that works for simple text searches is to specify the built
-in Windows command `findstr' as the command to run at the `M-x grep'
-prompt.  Normally you will want to use the `/n' argument to `findstr'.
+in Windows command ‘findstr’ as the command to run at the ‘M-x grep’
+prompt.  Normally you will want to use the ‘/n’ argument to ‘findstr’.
 
 * Menu:
 
@@ -1699,27 +1684,26 @@ File: efaq-w32.info,  Node: Recursive grep,  Up: Grep
 9.5.1 How do I do a recursive grep?
 -----------------------------------
 
-The Emacs commands `rgrep', `grep-find' and `find-grep-dired' are all
+The Emacs commands ‘rgrep’, ‘grep-find’ and ‘find-grep-dired’ are all
 different interfaces for grepping recursively into subdirectories.  By
-default, they use the command `find' to determine which files to work
-on, and either run `grep' directly from find, or use `xargs' to batch
-up files and reduce the number of invocations of `grep'.
+default, they use the command ‘find’ to determine which files to work
+on, and either run ‘grep’ directly from find, or use ‘xargs’ to batch up
+files and reduce the number of invocations of ‘grep’.
 
-   Windows also comes with a `find' command, but it is not in any way
-compatible with the POSIX `find' that Emacs tries to use.  Emacs
-expects a `find' compatible with GNU findutils.  *Note Other useful
-ports::.  After you have installed it, you will need to make sure that
-Emacs finds this version, not the standard Windows `find' command.  You
-can do this by either renaming the Windows command, changing your
-`PATH' to ensure that the directory containing the findutils `bin'
-directory comes before the Windows system directory, or set the
-variable `find-program' to the full path to the findutils `find'
-command.
+   Windows also comes with a ‘find’ command, but it is not in any way
+compatible with the POSIX ‘find’ that Emacs tries to use.  Emacs expects
+a ‘find’ compatible with GNU findutils.  *Note Other useful ports::.
+After you have installed it, you will need to make sure that Emacs finds
+this version, not the standard Windows ‘find’ command.  You can do this
+by either renaming the Windows command, changing your ‘PATH’ to ensure
+that the directory containing the findutils ‘bin’ directory comes before
+the Windows system directory, or set the variable ‘find-program’ to the
+full path to the findutils ‘find’ command.
 
    An alternative if you have a recent version of grep is to customize
-`grep-find-command' to use `grep -r' instead of both find and grep.
-Another alternative if you don't need the full capabilities of grep is
-to use `findstr /n /r'.
+‘grep-find-command’ to use ‘grep -r’ instead of both find and grep.
+Another alternative if you don’t need the full capabilities of grep is
+to use ‘findstr /n /r’.
 
 
 File: efaq-w32.info,  Node: Developing with Emacs,  Next: Other useful ports,  Prev: Text and Utility modes,  Up: Top
@@ -1740,9 +1724,9 @@ File: efaq-w32.info,  Node: MSVC,  Next: Borland C++ Builder,  Up: Developing wi
 10.1 How do I use Emacs with Microsoft Visual C++
 =================================================
 
-There are two ways you can use Emacs in conjunction with MSVC.  You can
-use Emacs as the editor, and do everything else in the DevStudio IDE.
-Or you can use Emacs as an IDE, calling the MSVC command line tools to
+There are two ways you can use Emacs in conjunction with MSVC. You can
+use Emacs as the editor, and do everything else in the DevStudio IDE. Or
+you can use Emacs as an IDE, calling the MSVC command line tools to
 build your project.
 
 * Menu:
@@ -1757,11 +1741,10 @@ File: efaq-w32.info,  Node: DevStudio,  Next: MSVC command line,  Up: MSVC
 ---------------------------------------------
 
 Christopher Payne wrote a Visual Studio add-in that makes Emacs the
-default text editor, this has now been taken over by Jeff Paquette.
-See the following two URLS for details:
-   * `http://sourceforge.net/projects/visemacs/' for the latest version.
-
-   * `http://www.smathers.net/VisEmacs.htm' for notes on usage.
+default text editor, this has now been taken over by Jeff Paquette.  See
+the following two URLS for details:
+   • <http://sourceforge.net/projects/visemacs/> for the latest version.
+   • <http://www.smathers.net/VisEmacs.htm> for notes on usage.
 
 
 File: efaq-w32.info,  Node: MSVC command line,  Prev: DevStudio,  Up: MSVC
@@ -1769,9 +1752,9 @@ File: efaq-w32.info,  Node: MSVC command line,  Prev: DevStudio,  Up: MSVC
 10.1.2 Using MSVC command line tools from Emacs
 -----------------------------------------------
 
-This is an app note on how to use Microsoft Visual C++ with Emacs. The
-experiments done below were done with Emacs 19.34.1 on Windows 95,
-using Visual C++ 4.0 Standard Edition. Your mileage may vary.
+This is an app note on how to use Microsoft Visual C++ with Emacs.  The
+experiments done below were done with Emacs 19.34.1 on Windows 95, using
+Visual C++ 4.0 Standard Edition.  Your mileage may vary.
 
    This writeup assumes minimal knowledge of Emacs hacking on the part
 of the reader.
@@ -1789,24 +1772,24 @@ File: efaq-w32.info,  Node: VC++ environment,  Next: Default compile command,  U
 10.1.2.1 VC++ Environment Variables
 ...................................
 
-There is a batch file in your VC++ installation's bin directory called
-`vcvars32.bat', which sets up the environment variables needed to run
+There is a batch file in your VC++ installation’s bin directory called
+‘vcvars32.bat’, which sets up the environment variables needed to run
 the VC++ command line tools.  Arrange for those same environment
 variables to be set in your Emacs session.  You can do this on Windows
-9x by calling the `vcvars32.bat' script from `autoexec.bat'.  On other
-versions of Windows you can set the environment variables globally
-using the System control panel.
+9x by calling the ‘vcvars32.bat’ script from ‘autoexec.bat’.  On other
+versions of Windows you can set the environment variables globally using
+the System control panel.
 
    For all versions of Windows you can alternatively set the variables
-just inside Emacs by using `setenv' calls in your init file.  *Note
+just inside Emacs by using ‘setenv’ calls in your init file.  *Note
 Where do I put my init file?: Installing Emacs.
 
-   You should now be able to compile from Emacs. Load a source file from
-a VC++ project. Type `M-x compile'. Replace the proposed command line
-with:
+   You should now be able to compile from Emacs.  Load a source file
+from a VC++ project.  Type ‘M-x compile’.  Replace the proposed command
+line with:
      nmake -f PROJECTNAME.mak
 
-   You will find that this defaults to a debug build. You can change it
+   You will find that this defaults to a debug build.  You can change it
 to a release build with:
      nmake -f PROJECTNAME.mak CFG="PROJECTNAME - Win32 Release"
 
@@ -1825,7 +1808,7 @@ following to your init file:
    If you work on the same project long term, you can add the project
 makefile to the string.
 
-   David Biesack suggests that perhaps it's easy to write a `Makefile'
+   David Biesack suggests that perhaps it’s easy to write a ‘Makefile’
 in the project directory which does
 
      PROJECT=MyProject
@@ -1836,12 +1819,12 @@ in the project directory which does
              nmake /f $(PROJECT).mak CFG="$(PROJECT) - Win32 Release"
      FORCE:
 
-   and then you can simply change compile-command to `nmake'.
+   and then you can simply change compile-command to ‘nmake’.
 
    Caleb T. Deupree reports that on VC++ 5.0 and up, "You can also set
 an option in Options/Build to export a makefile every time the project
-is saved, which you can then use to compile with `nmake -f
-project.mak'."  VC++ 4.0 builds the make file every time, and there is
+is saved, which you can then use to compile with ‘nmake -f
+project.mak’."  VC++ 4.0 builds the make file every time, and there is
 no option.
 
 
@@ -1850,7 +1833,7 @@ File: efaq-w32.info,  Node: Reverting buffers,  Next: Edit MSVC,  Prev: Default 
 10.1.2.3 Reverting Buffers
 ..........................
 
-It is recommended that you use `auto-revert-mode' in buffers that you
+It is recommended that you use ‘auto-revert-mode’ in buffers that you
 have open in both Emacs and MSVC++ at the same time.  Then if you
 mistakenly edit the file in MSVC++, Emacs will pick up your changes
 immediately, rather than after you have written lots more code and
@@ -1863,26 +1846,26 @@ File: efaq-w32.info,  Node: Edit MSVC,  Prev: Reverting buffers,  Up: MSVC comma
 ..........................................
 
 You can also set up VC++ to import a file into Emacs for you, all ready
-for editing.  In VC++, go to the `Tools' pull-down menu, and click on
-`Customize...'.  In the `Tools' tab, click on `Add'.  Use `Browse' to
-locate the `emacsclientw.exe' file in your Emacs bin directory, and
-select it.  For arguments, use `+$(CurLine)' `"$(FilePath)"' and for
-the directory use the `$(WkspDir)' (the quotes around FilePath handle
-paths with spaces in them). Set the Menu Text to say "Em&acs". The
-`+$(CurLine)' will set point in Emacs to the same line as the cursor
-position in VC++. The ampersand in the word `Em&acs' allows you to
-select emacs from the keyboard. (E is already used for the OLE control
+for editing.  In VC++, go to the ‘Tools’ pull-down menu, and click on
+‘Customize...’.  In the ‘Tools’ tab, click on ‘Add’.  Use ‘Browse’ to
+locate the ‘emacsclientw.exe’ file in your Emacs bin directory, and
+select it.  For arguments, use ‘+$(CurLine)’ ‘"$(FilePath)"’ and for the
+directory use the ‘$(WkspDir)’ (the quotes around FilePath handle paths
+with spaces in them).  Set the Menu Text to say "Em&acs".  The
+‘+$(CurLine)’ will set point in Emacs to the same line as the cursor
+position in VC++.  The ampersand in the word ‘Em&acs’ allows you to
+select emacs from the keyboard.  (E is already used for the OLE control
 test container.)
 
    You should now be able to go to any source file in your project.
-Then, use the pull-down menu `Tools->Emacs'. The active file in your
+Then, use the pull-down menu ‘Tools->Emacs’.  The active file in your
 VC++ IDE should now be front and center in Emacs, all ready to edit as
-you wish. If you use keystrokes to work the menus, try `Alt-T A' to
-move the file into Emacs. Binding this tool to a keystroke will be left
+you wish.  If you use keystrokes to work the menus, try ‘Alt-T A’ to
+move the file into Emacs.  Binding this tool to a keystroke will be left
 as an exercise for the student.
 
    If you have the option of saving files before running tools, make
-sure this option is set. (I don't see it on VC++ 4.0.)
+sure this option is set.  (I don’t see it on VC++ 4.0.)
 
 
 File: efaq-w32.info,  Node: Borland C++ Builder,  Next: Version control,  Prev: MSVC,  Up: Developing with Emacs
@@ -1890,9 +1873,9 @@ File: efaq-w32.info,  Node: Borland C++ Builder,  Next: Version control,  Prev: 
 10.2 Emacs and Borland C++ Builder
 ==================================
 
-Jonathan Arnold has written an EmacsEdit "expert"
-(http://www.buddydog.org/C++Builder/c++builder.html) for interfacing
-C++ Builder and Emacs.
+Jonathan Arnold has written an EmacsEdit “expert”
+(http://www.buddydog.org/C++Builder/c++builder.html) for interfacing C++
+Builder and Emacs.
 
 
 File: efaq-w32.info,  Node: Version control,  Next: Perldb,  Prev: Borland C++ Builder,  Up: Developing with Emacs
@@ -1904,7 +1887,7 @@ If you are using a graphical revision control tool already, check if it
 comes with command-line tools.  Many such GUI tools are just wrappers
 for the same command line tools that Emacs requires for its VC
 integration.  Most of the supported VC systems have well supported Free
-native Windows binaries.  For those that don't Cygwin may be an option.
+native Windows binaries.  For those that don’t Cygwin may be an option.
 *Note Other useful ports::.
 
 
@@ -1916,8 +1899,8 @@ File: efaq-w32.info,  Node: Perldb,  Prev: Version control,  Up: Developing with
 From Jay Rogers:
 
    Some versions of the perl debugger itself need to be patched to work
-with emacs. They are perl versions 5.001 and less, and version
-5.004_01. To fix, locate and change the code similar to the following
+with emacs.  They are perl versions 5.001 and less, and version
+5.004_01.  To fix, locate and change the code similar to the following
 code in lib/perl5db.pl
              if (-e "/dev/tty") {
                  $console = "/dev/tty";
@@ -1957,15 +1940,14 @@ File: efaq-w32.info,  Node: Cygwin,  Next: MinGW,  Up: Other useful ports
 11.1 Cygwin
 ===========
 
-`http://www.cygwin.com/'.
+<http://www.cygwin.com/>.
 
    Cygwin is a popular complete POSIX emulation environment for Windows.
 Most of its tools can be used with Emacs, and it covers a wide range of
-ported software.  The main shell used by Cygwin is GNU `bash', but
-other shells are also available.  Some Cygwin tools may not
-interoperate well with Emacs or other native Windows tools, due to the
-total immersion aspect of Cygwin, including its non-native filesystem
-mapping.
+ported software.  The main shell used by Cygwin is GNU ‘bash’, but other
+shells are also available.  Some Cygwin tools may not interoperate well
+with Emacs or other native Windows tools, due to the total immersion
+aspect of Cygwin, including its non-native filesystem mapping.
 
    If you choose to use Cygwin, then its tools will probably be all that
 you need, but you will need to get image libraries from elsewhere, as
@@ -1973,8 +1955,8 @@ the Cygwin ones are not compatible with non-Cygwin software.  In fact,
 if Cygwin is on your PATH when you run Emacs, and Emacs does not find
 other versions of the image libraries first, then the Cygwin ones can
 cause problems.  Cygwin developers recommend that you do not put Cygwin
-on your system `PATH' for this reason.  Instead you can make the Cygwin
-tools available within Emacs by setting `exec-path' in your init file.
+on your system ‘PATH’ for this reason.  Instead you can make the Cygwin
+tools available within Emacs by setting ‘exec-path’ in your init file.
 
 
 File: efaq-w32.info,  Node: MinGW,  Next: UWIN,  Prev: Cygwin,  Up: Other useful ports
@@ -1982,16 +1964,16 @@ File: efaq-w32.info,  Node: MinGW,  Next: UWIN,  Prev: Cygwin,  Up: Other useful
 11.2 MinGW and MSYS
 ===================
 
-`http://www.mingw.org/'
+<http://www.mingw.org/>
 
    MinGW is a set of development tools that produce native Windows
-executables, not dependent on Cygwin's POSIX emulation DLLs.
+executables, not dependent on Cygwin’s POSIX emulation DLLs.
 
-   MSYS is a POSIX shell and minimal set of tools that are commonly
-used in configure scripts.  Like Cygwin, this environment uses a
-non-native filesystem mapping to appear more POSIX like to the scripts
-that it runs.  This is intended to complement the MinGW tools to make
-it easier to port software to Windows.
+   MSYS is a POSIX shell and minimal set of tools that are commonly used
+in configure scripts.  Like Cygwin, this environment uses a non-native
+filesystem mapping to appear more POSIX like to the scripts that it
+runs.  This is intended to complement the MinGW tools to make it easier
+to port software to Windows.
 
 
 File: efaq-w32.info,  Node: UWIN,  Next: GnuWin32,  Prev: MinGW,  Up: Other useful ports
@@ -1999,11 +1981,11 @@ File: efaq-w32.info,  Node: UWIN,  Next: GnuWin32,  Prev: MinGW,  Up: Other usef
 11.3 UWIN
 =========
 
-`http://www.research.att.com/sw/tools/uwin/'
+<http://www.research.att.com/sw/tools/uwin/>
 
    UWIN is another POSIX emulation environment, like Cygwin and MSYS,
-that provides a large number of ported tools.  The shell used by UWIN
-is `ksh', the Korn shell.
+that provides a large number of ported tools.  The shell used by UWIN is
+‘ksh’, the Korn shell.
 
 
 File: efaq-w32.info,  Node: GnuWin32,  Next: GTK,  Prev: UWIN,  Up: Other useful ports
@@ -2011,55 +1993,34 @@ File: efaq-w32.info,  Node: GnuWin32,  Next: GTK,  Prev: UWIN,  Up: Other useful
 11.4 GnuWin32
 =============
 
-`http://gnuwin32.sourceforge.net/'
+<http://gnuwin32.sourceforge.net/>
 
    GnuWin32 provides precompiled native Windows ports of a wide
-selection of Free software and libraries.  Tools available here that
-are useful for Emacs include:
+selection of Free software and libraries.  Tools available here that are
+useful for Emacs include:
 
-   * Arc - used by `archive-mode' to edit .arc files.
-
-   * Bzip2 - used by Emacs to automatically decompress .bz2 files.
-
-   * CompFace - used by `gnus' to display XFace headers in messages.
-
-   * CoreUtils - GNU file, shell and text utilities (also in MSYS)
-
-   * DiffUtils - for `ediff' and producing patches
-
-   * FindUtils - for `grep-find' and other file searches.
-
-   * GifLib - library to support GIF images.
-
-   * Grep - for searching through files with `grep'.
-
-   * Gzip - used by Emacs to automatically decompress .gz files.
-
-   * Jpeg - library to support JPEG images (also in GTK).
-
-   * Lha - used by `archive-mode' to edit .lzh files.
-
-   * LibPng - library to support PNG images (also in GTK).
-
-   * LibTiff - library to support TIFF images (also in GTK).
-
-   * Make - used by `compile' for building projects (also in MinGW)
-
-   * OpenSSL - used by `gnus' to talk to servers over SSL.
-
-   * Patch - used by `ediff-patch-file' and others to apply patches.
-
-   * Tar - used by `tar-mode' to edit tar files.
-
-   * TexInfo - used to build Emacs' manuals.
-
-   * Unzip - used by `archive-mode' for extracting zip files.
-
-   * Xpm - library to support XPM images (bundled with Emacs binaries)
-
-   * Zip - used by `archive-mode' for editing zip files.
-
-   * Zlib - required by LibPng (also in GTK).
+   • Arc - used by ‘archive-mode’ to edit .arc files.
+   • Bzip2 - used by Emacs to automatically decompress .bz2 files.
+   • CompFace - used by ‘gnus’ to display XFace headers in messages.
+   • CoreUtils - GNU file, shell and text utilities (also in MSYS)
+   • DiffUtils - for ‘ediff’ and producing patches
+   • FindUtils - for ‘grep-find’ and other file searches.
+   • GifLib - library to support GIF images.
+   • Grep - for searching through files with ‘grep’.
+   • Gzip - used by Emacs to automatically decompress .gz files.
+   • Jpeg - library to support JPEG images (also in GTK).
+   • Lha - used by ‘archive-mode’ to edit .lzh files.
+   • LibPng - library to support PNG images (also in GTK).
+   • LibTiff - library to support TIFF images (also in GTK).
+   • Make - used by ‘compile’ for building projects (also in MinGW)
+   • OpenSSL - used by ‘gnus’ to talk to servers over SSL.
+   • Patch - used by ‘ediff-patch-file’ and others to apply patches.
+   • Tar - used by ‘tar-mode’ to edit tar files.
+   • TexInfo - used to build Emacs’ manuals.
+   • Unzip - used by ‘archive-mode’ for extracting zip files.
+   • Xpm - library to support XPM images (bundled with Emacs binaries)
+   • Zip - used by ‘archive-mode’ for editing zip files.
+   • Zlib - required by LibPng (also in GTK).
 
 
 File: efaq-w32.info,  Node: GTK,  Next: Read man pages,  Prev: GnuWin32,  Up: Other useful ports
@@ -2068,11 +2029,11 @@ File: efaq-w32.info,  Node: GTK,  Next: Read man pages,  Prev: GnuWin32,  Up: Ot
 ========
 
 GTK is a potential source for some of the image libraries that Emacs
-requires.  GTK is installed along with other ports of GUI software,
-such as the GIMP image editor, and Pidgin instant messenger client.  If
-GTK is installed when you run `addpm', Emacs will use the image
-libraries that it provides, even if they are not on the `PATH'.  GTK
-ships with JPEG, PNG and TIFF support.
+requires.  GTK is installed along with other ports of GUI software, such
+as the GIMP image editor, and Pidgin instant messenger client.  If GTK
+is installed when you run ‘addpm’, Emacs will use the image libraries
+that it provides, even if they are not on the ‘PATH’.  GTK ships with
+JPEG, PNG and TIFF support.
 
 
 File: efaq-w32.info,  Node: Read man pages,  Prev: GTK,  Up: Other useful ports
@@ -2081,9 +2042,9 @@ File: efaq-w32.info,  Node: Read man pages,  Prev: GTK,  Up: Other useful ports
 =============================
 
 Man pages for Emacs and other ported programs that you have can be read
-using Emacs' built-in manual reader `woman'.  This requires no external
-programs, but if you do have a port of `man', there is also an Emacs
-wrapper `man' that which may be slightly faster.
+using Emacs’ built-in manual reader ‘woman’.  This requires no external
+programs, but if you do have a port of ‘man’, there is also an Emacs
+wrapper ‘man’ that which may be slightly faster.
 
 
 File: efaq-w32.info,  Node: Further information,  Next: Indexes,  Prev: Other useful ports,  Up: Top
@@ -2103,15 +2064,13 @@ File: efaq-w32.info,  Node: More information,  Next: Mailing lists,  Up: Further
 ==================================================
 
 If you have general questions about Emacs, the best places to start
-looking are *note Top: (emacs)Top, and *note Top: (efaq)Top.  In Emacs,
-you can browse the manual using Info by typing `C-h r', and you can
-view the FAQ by typing `C-h C-f'. Other resources include:
+looking are *note (emacs)Top::, and *note (efaq)Top::.  In Emacs, you
+can browse the manual using Info by typing ‘C-h r’, and you can view the
+FAQ by typing ‘C-h C-f’.  Other resources include:
 
-   * The Emacs homepage (http://www.gnu.org/software/emacs/)
-
-   * Other Emacs manuals (http://www.gnu.org/software/emacs/manual/)
-
-   * Emacs Wiki (http://www.emacswiki.org/)
+   • The Emacs homepage (http://www.gnu.org/software/emacs/)
+   • Other Emacs manuals (http://www.gnu.org/software/emacs/manual/)
+   • Emacs Wiki (http://www.emacswiki.org/)
 
 
 File: efaq-w32.info,  Node: Mailing lists,  Prev: More information,  Up: Further information
@@ -2143,9 +2102,9 @@ Function and Variable Index
 * ange-ftp-ftp-program-name:             Using FTP.             (line 6)
 * auto-revert-mode:                      Reverting buffers.     (line 6)
 * bdf-directory-alist:                   BDF fonts.             (line 6)
+* comint-completion-addsuffix:           Bash.                  (line 6)
 * comint-completion-addsuffix <1>:       Shell completion forward slash.
                                                                 (line 6)
-* comint-completion-addsuffix:           Bash.                  (line 6)
 * comint-eol-on-send:                    Bash.                  (line 6)
 * comint-mode-hook:                      Shell echo.            (line 6)
 * comint-process-echoes:                 Shell echo.            (line 6)
@@ -2250,9 +2209,9 @@ Concept Index
                                                                (line  6)
 * ange-ftp:                              Using FTP.            (line  6)
 * anti-virus software reporting a virus in Emacs: Virus.       (line  6)
+* anti-virus software, bad interaction with: Anti-virus.       (line  6)
 * anti-virus software, bad interaction with <1>: Shell commands do nothing.
                                                                (line  6)
-* anti-virus software, bad interaction with: Anti-virus.       (line  6)
 * arch, version control integration with Emacs: Version control.
                                                                (line  6)
 * aspell:                                Spell check.          (line  6)
@@ -2261,9 +2220,9 @@ Concept Index
 * attachments, in gnus:                  Attachments with Gnus.
                                                                (line  6)
 * auctex, precompiled for Windows:       AUCTeX.               (line  6)
-* auto protect, anti-virus option causing problems <1>: Shell commands do nothing.
-                                                               (line  6)
 * auto protect, anti-virus option causing problems: Anti-virus.
+                                                               (line  6)
+* auto protect, anti-virus option causing problems <1>: Shell commands do nothing.
                                                                (line  6)
 * bash, using cygwin shell within Emacs: Bash.                 (line  6)
 * BDF fonts, using:                      BDF fonts.            (line  6)
@@ -2277,7 +2236,6 @@ Concept Index
 * bold fonts, synthesized:               Bold and italic.      (line  6)
 * Borland C++, integration with Emacs:   Borland C++ Builder.  (line  6)
 * bugs in Emacs, how to debug:           Debugging.            (line  6)
-* Bzr, getting Emacs:                    Downloading.          (line 17)
 * bzr, version control integration with Emacs: Version control.
                                                                (line  6)
 * C-c to copy:                           CUA.                  (line  6)
@@ -2363,9 +2321,9 @@ Concept Index
                                                                (line  6)
 * findstr:                               Grep.                 (line  6)
 * findstr, recursive:                    Recursive grep.       (line  6)
+* firewall, bad interaction with:        Anti-virus.           (line  6)
 * firewall, bad interaction with <1>:    Shell commands do nothing.
                                                                (line  6)
-* firewall, bad interaction with:        Anti-virus.           (line  6)
 * floppy drive, access when subprocesses started: Subprocesses and floppy drive.
                                                                (line  6)
 * flyspell:                              Spell check.          (line  6)
@@ -2387,6 +2345,7 @@ Concept Index
                                                                (line  6)
 * garbage on the clipboard:              Garbled clipboard.    (line  6)
 * GDB, debugging Emacs with:             GDB.                  (line  6)
+* getting Emacs:                         Downloading.          (line 17)
 * gif, installing image support in Emacs: Image support.       (line  6)
 * git, version control integration with Emacs: Version control.
                                                                (line  6)
@@ -2548,9 +2507,9 @@ Concept Index
 * revision control, integration with Emacs: Version control.   (line  6)
 * rmail, mail client:                    Incoming mail with Rmail.
                                                                (line  6)
-* scan all files, anti-virus option causing problems <1>: Shell commands do nothing.
-                                                               (line  6)
 * scan all files, anti-virus option causing problems: Anti-virus.
+                                                               (line  6)
+* scan all files, anti-virus option causing problems <1>: Shell commands do nothing.
                                                                (line  6)
 * scan codes, modifying:                 Swap CapsLock and Control.
                                                                (line  6)
@@ -2571,9 +2530,9 @@ Concept Index
 * shell within emacs, using:             Using shell.          (line  6)
 * shell, Incorrect DOS version messages: Incorrect DOS version.
                                                                (line  6)
+* shell, interacting badly with anti-virus: Anti-virus.        (line  6)
 * shell, interacting badly with anti-virus <1>: Shell commands do nothing.
                                                                (line  6)
-* shell, interacting badly with anti-virus: Anti-virus.        (line  6)
 * shell, using cygwin bash within Emacs: Bash.                 (line  6)
 * shift key, selecting with:             CUA.                  (line  6)
 * shutdown, complaints about cmdproxy.exe running: Killing subprocesses.
@@ -2583,7 +2542,7 @@ Concept Index
                                                                (line  6)
 * smtp server:                           Outgoing mail.        (line  6)
 * sound, changing the beep:              Beep sound.           (line  6)
-* source control,  integration with Emacs: Version control.    (line  6)
+* source control, integration with Emacs: Version control.     (line  6)
 * source for Emacs:                      Downloading.          (line 13)
 * spell checking:                        Spell check.          (line  6)
 * SQL subprocess hanging:                Subprocess buffering. (line  6)
@@ -2648,9 +2607,9 @@ Concept Index
 * vcvars32.bat:                          VC++ environment.     (line  6)
 * version control, integration with Emacs: Version control.    (line  6)
 * virus reported in Emacs:               Virus.                (line  6)
+* virus software, bad interaction with:  Anti-virus.           (line  6)
 * virus software, bad interaction with <1>: Shell commands do nothing.
                                                                (line  6)
-* virus software, bad interaction with:  Anti-virus.           (line  6)
 * VisEmacs, add in for MS Developer Studio: DevStudio.         (line  6)
 * Visual Studio, keeping source in sync: Reverting buffers.    (line  6)
 * Visual Studio, load in Emacs command:  Edit MSVC.            (line  6)
@@ -2682,119 +2641,119 @@ Concept Index
 
 
 Tag Table:
-Node: Top1128
-Node: Introduction2852
-Node: Why Emacs on Windows3231
-Node: Which versions of Windows3892
-Node: Other versions of Emacs4377
-Node: Getting Emacs4828
-Node: Downloading5016
-Node: Compiling5813
-Node: Debugging6818
-Node: GDB7456
-Node: Microsoft Developer Studio7941
-Node: Installing Emacs8392
-Node: Unpacking8865
-Node: Installing10227
-Node: Image support10668
-Node: Init file11308
-Node: Location of init file11917
-Node: Troubleshooting init file13751
-Node: Associate files with Emacs14692
-Node: Using with Explorer15312
-Node: Find-file and the Desktop16120
-Node: Make Windows more like X17052
-Node: Focus follows mouse17366
-Node: Swap CapsLock and Control17984
-Node: Swap Caps NT18395
-Node: Swap Caps 9820922
-Node: Make Emacs like a Windows app21223
-Node: Highlight selection21860
-Node: CUA23387
-Node: Window operations24125
-Node: Uninstall24618
-Node: Does not run25389
-Node: Virus26582
-Node: Anti-virus27349
-Node: Display Settings27987
-Node: Console window size28255
-Node: Mouse trouble28846
-Node: Cut and paste NUL29666
-Node: Garbled clipboard30148
-Node: Beep sound30536
-Node: Fonts and text translation30929
-Node: Font names31208
-Node: Bold and italic33310
-Node: Multilingual fonts34253
-Node: Language display34562
-Node: Non-latin display35431
-Node: International fonts37096
-Node: Third-party multibyte37778
-Node: Localized fonts38770
-Node: BDF fonts39141
-Node: Font menu42461
-Node: Add fonts to menu42789
-Node: Line ends43476
-Node: Automatic line ends44090
-Node: Line ends by filename44725
-Node: Line ends by file system45362
-Node: Printing45969
-Node: Sub-processes46501
-Node: Quoting issues46931
-Node: Subprocess hang47414
-Node: Subprocess buffering48404
-Node: Perl script buffering50232
-Node: Subprocesses and floppy drive50593
-Node: Killing subprocesses51054
-Node: Subprocess EOF51839
-Node: Using shell52336
-Node: Bash53005
-Node: Cygwin paths54250
-Node: Dired ls54570
-Node: Shell echo55156
-Node: Shell completion forward slash56837
-Node: Incorrect DOS version57273
-Node: Shell commands do nothing58258
-Node: Network access58703
-Node: Mail58931
-Node: Outgoing mail59585
-Node: Incoming mail with Rmail60525
-Node: Incoming mail with Gnus60993
-Node: Incoming mail other61435
-Node: Attachments with Gnus61862
-Node: Using FTP62537
-Node: Tramp ssh63392
-Node: telnet64284
-Node: Text and Utility modes64758
-Node: TeX65000
-Node: AUCTeX65337
-Node: Spell check65706
-Node: Encryption66459
-Node: Mouse wheel66734
-Node: Grep67463
-Node: Recursive grep68037
-Node: Developing with Emacs69359
-Node: MSVC69605
-Node: DevStudio70078
-Node: MSVC command line70564
-Node: VC++ environment71122
-Node: Default compile command72277
-Node: Reverting buffers73452
-Node: Edit MSVC73919
-Node: Borland C++ Builder75314
-Node: Version control75644
-Node: Perldb76269
-Node: Other useful ports77267
-Node: Cygwin77510
-Node: MinGW78632
-Node: UWIN79231
-Node: GnuWin3279557
-Node: GTK81185
-Node: Read man pages81686
-Node: Further information82093
-Node: More information82293
-Node: Mailing lists82937
-Node: Indexes83482
+Node: Top1117
+Node: Introduction2851
+Node: Why Emacs on Windows3230
+Node: Which versions of Windows3895
+Node: Other versions of Emacs4383
+Node: Getting Emacs4837
+Node: Downloading5025
+Node: Compiling5829
+Node: Debugging6862
+Node: GDB7508
+Node: Microsoft Developer Studio8004
+Node: Installing Emacs8459
+Node: Unpacking8932
+Node: Installing10304
+Node: Image support10752
+Node: Init file11392
+Node: Location of init file12005
+Node: Troubleshooting init file13894
+Node: Associate files with Emacs14867
+Node: Using with Explorer15499
+Node: Find-file and the Desktop16323
+Node: Make Windows more like X17265
+Node: Focus follows mouse17579
+Node: Swap CapsLock and Control18205
+Node: Swap Caps NT18616
+Node: Swap Caps 9821155
+Node: Make Emacs like a Windows app21456
+Node: Highlight selection22097
+Node: CUA23640
+Node: Window operations24386
+Node: Uninstall24889
+Node: Does not run25690
+Node: Virus26887
+Node: Anti-virus27658
+Node: Display Settings28304
+Node: Console window size28572
+Node: Mouse trouble29167
+Node: Cut and paste NUL30003
+Node: Garbled clipboard30485
+Node: Beep sound30877
+Node: Fonts and text translation31275
+Node: Font names31554
+Node: Bold and italic33664
+Node: Multilingual fonts34607
+Node: Language display34916
+Node: Non-latin display35784
+Node: International fonts37457
+Node: Third-party multibyte38139
+Node: Localized fonts39131
+Node: BDF fonts39506
+Node: Font menu42858
+Node: Add fonts to menu43186
+Node: Line ends43881
+Node: Automatic line ends44495
+Node: Line ends by filename45135
+Node: Line ends by file system45776
+Node: Printing46396
+Node: Sub-processes46927
+Node: Quoting issues47357
+Node: Subprocess hang47840
+Node: Subprocess buffering48857
+Node: Perl script buffering50723
+Node: Subprocesses and floppy drive51084
+Node: Killing subprocesses51545
+Node: Subprocess EOF52334
+Node: Using shell52840
+Node: Bash53529
+Node: Cygwin paths54789
+Node: Dired ls55109
+Node: Shell echo55703
+Node: Shell completion forward slash57454
+Node: Incorrect DOS version57899
+Node: Shell commands do nothing58908
+Node: Network access59358
+Node: Mail59586
+Node: Outgoing mail60240
+Node: Incoming mail with Rmail61203
+Node: Incoming mail with Gnus61671
+Node: Incoming mail other62112
+Node: Attachments with Gnus62539
+Node: Using FTP63226
+Node: Tramp ssh64089
+Node: telnet65013
+Node: Text and Utility modes65487
+Node: TeX65729
+Node: AUCTeX66066
+Node: Spell check66435
+Node: Encryption67216
+Node: Mouse wheel67491
+Node: Grep68223
+Node: Recursive grep68822
+Node: Developing with Emacs70217
+Node: MSVC70463
+Node: DevStudio70935
+Node: MSVC command line71425
+Node: VC++ environment71985
+Node: Default compile command73166
+Node: Reverting buffers74355
+Node: Edit MSVC74826
+Node: Borland C++ Builder76283
+Node: Version control76617
+Node: Perldb77244
+Node: Other useful ports78244
+Node: Cygwin78487
+Node: MinGW79621
+Node: UWIN80222
+Node: GnuWin3280552
+Node: GTK82253
+Node: Read man pages82762
+Node: Further information83183
+Node: More information83383
+Node: Mailing lists84034
+Node: Indexes84579
 
 End Tag Table
 

@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-bahai" "cal-bahai.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-bahai.el
 
 (autoload 'diary-bahai-list-entries "cal-bahai" "\
@@ -41,8 +41,8 @@ Bahá'í calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-china" "cal-china.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-china" "cal-china.el" (21710 25547 57569
+;;;;;;  864000))
 ;;; Generated autoloads from cal-china.el
 
 (autoload 'diary-chinese-date "cal-china" "\
@@ -52,8 +52,8 @@ Chinese calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-coptic" "cal-coptic.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-coptic" "cal-coptic.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-coptic.el
 
 (autoload 'diary-coptic-date "cal-coptic" "\
@@ -68,8 +68,8 @@ Ethiopic calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-french" "cal-french.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-french" "cal-french.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-french.el
 
 (autoload 'diary-french-date "cal-french" "\
@@ -79,8 +79,8 @@ French calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-hebrew" "cal-hebrew.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-hebrew.el
 
 (autoload 'diary-hebrew-list-entries "cal-hebrew" "\
@@ -209,8 +209,8 @@ use when highlighting the day in the calendar.
 
 ;;;***
 
-;;;### (autoloads nil "cal-islam" "cal-islam.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-islam" "cal-islam.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-islam.el
 
 (autoload 'diary-islamic-list-entries "cal-islam" "\
@@ -248,8 +248,7 @@ Islamic calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-iso" "cal-iso.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-iso" "cal-iso.el" (21710 25547 58569 859000))
 ;;; Generated autoloads from cal-iso.el
 
 (autoload 'diary-iso-date "cal-iso" "\
@@ -259,8 +258,8 @@ ISO calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-julian" "cal-julian.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-julian" "cal-julian.el" (21710 25547 58569
+;;;;;;  859000))
 ;;; Generated autoloads from cal-julian.el
 
 (autoload 'diary-julian-date "cal-julian" "\
@@ -275,8 +274,8 @@ Astronomical (Julian) day number diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-mayan" "cal-mayan.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-mayan" "cal-mayan.el" (21710 25547 59569
+;;;;;;  855000))
 ;;; Generated autoloads from cal-mayan.el
 
 (autoload 'diary-mayan-date "cal-mayan" "\
@@ -286,8 +285,8 @@ Show the Mayan long count, haab, and tzolkin dates as a diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "cal-persia" "cal-persia.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "cal-persia" "cal-persia.el" (21710 25547 59569
+;;;;;;  855000))
 ;;; Generated autoloads from cal-persia.el
 
 (autoload 'diary-persian-date "cal-persia" "\
@@ -297,8 +296,8 @@ Persian calendar equivalent of date diary entry.
 
 ;;;***
 
-;;;### (autoloads nil "holidays" "holidays.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "holidays" "holidays.el" (21710 25547 60569
+;;;;;;  851000))
 ;;; Generated autoloads from holidays.el
 
 (autoload 'calendar-holiday-list "holidays" "\
@@ -317,7 +316,7 @@ strings describing those holidays that apply on DATE, or nil if none do.
 
 ;;;***
 
-;;;### (autoloads nil "lunar" "lunar.el" (21291 53104 431149 0))
+;;;### (autoloads nil "lunar" "lunar.el" (21710 25547 61569 846000))
 ;;; Generated autoloads from lunar.el
 
 (autoload 'diary-lunar-phases "lunar" "\
@@ -331,7 +330,7 @@ use when highlighting the day in the calendar.
 
 ;;;***
 
-;;;### (autoloads nil "solar" "solar.el" (21291 53104 431149 0))
+;;;### (autoloads nil "solar" "solar.el" (21710 25465 95935 269000))
 ;;; Generated autoloads from solar.el
 
 (autoload 'diary-sunrise-sunset "solar" "\
@@ -345,7 +344,7 @@ Accurate to a few seconds.
 ;;;### (autoloads nil nil ("appt.el" "cal-dst.el" "cal-html.el" "cal-loaddefs.el"
 ;;;;;;  "cal-menu.el" "cal-move.el" "cal-tex.el" "cal-x.el" "calendar.el"
 ;;;;;;  "diary-lib.el" "icalendar.el" "parse-time.el" "time-date.el"
-;;;;;;  "timeclock.el" "todo-mode.el") (21569 15425 891478 829000))
+;;;;;;  "timeclock.el" "todo-mode.el") (21713 25976 608690 651000))
 
 ;;;***
 

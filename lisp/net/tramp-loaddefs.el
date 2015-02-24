@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "tramp" "tramp.el" (21391 16284 875808 0))
+;;;### (autoloads nil "tramp" "tramp.el" (21713 24233 279494 843000))
 ;;; Generated autoloads from tramp.el
 
 (defvar tramp-methods nil "\
@@ -51,7 +51,7 @@ pair of the form (KEY VALUE).  The following KEYs are defined:
     tamper the process output.
   * `tramp-copy-program'
     This specifies the name of the program to use for remotely copying
-    the file; this might be the absolute filename of rcp or the name of
+    the file; this might be the absolute filename of scp or the name of
     a workalike program.  It is always applied on the local host.
   * `tramp-copy-args'
     This specifies the list of parameters to pass to the above mentioned
@@ -59,6 +59,13 @@ pair of the form (KEY VALUE).  The following KEYs are defined:
   * `tramp-copy-env'
      A list of environment variables and their values, which will
      be set when calling `tramp-copy-program'.
+  * `tramp-remote-copy-program'
+    The listener program to be applied on remote side, if needed.
+  * `tramp-remote-copy-args'
+    The list of parameters to pass to the listener program, the hints
+    for `tramp-login-args' also apply here.  Additionally, \"%r\" could
+    be used here and in `tramp-copy-args'.  It denotes a randomly
+    chosen port for the remote listener.
   * `tramp-copy-keep-date'
     This specifies whether the copying program when the preserves the
     timestamp of the original file.
@@ -86,7 +93,7 @@ pair of the form (KEY VALUE).  The following KEYs are defined:
 What does all this mean?  Well, you should specify `tramp-login-program'
 for all methods; this program is used to log in to the remote site.  Then,
 there are two ways to actually transfer the files between the local and the
-remote side.  One way is using an additional rcp-like program.  If you want
+remote side.  One way is using an additional scp-like program.  If you want
 to do this, set `tramp-copy-program' in the method.
 
 Another possibility for file transfer is inline transfer, i.e. the
@@ -111,7 +118,7 @@ started on the local host.  You should specify a remote host
 `localhost' or the name of the local host.  Another host name is
 useful only in combination with `tramp-default-proxies-alist'.")
 
-(defconst tramp-ssh-controlmaster-options (let ((result "") (case-fold-search t)) (ignore-errors (with-temp-buffer (call-process "ssh" nil t nil "-o" "ControlMaster") (goto-char (point-min)) (when (search-forward-regexp "missing.+argument" nil t) (setq result "-o ControlPath=%t.%%r@%%h:%%p -o ControlMaster=auto"))) (unless (zerop (length result)) (with-temp-buffer (call-process "ssh" nil t nil "-o" "ControlPersist") (goto-char (point-min)) (when (search-forward-regexp "missing.+argument" nil t) (setq result (concat result " -o ControlPersist=no")))))) result) "\
+(defconst tramp-ssh-controlmaster-options (let ((result "") (case-fold-search t)) (ignore-errors (when (executable-find "ssh") (with-temp-buffer (call-process "ssh" nil t nil "-o" "ControlMaster") (goto-char (point-min)) (when (search-forward-regexp "missing.+argument" nil t) (setq result "-o ControlMaster=auto"))) (unless (zerop (length result)) (with-temp-buffer (call-process "ssh" nil t nil "-o" "ControlPath=%C" "host.does.not.exist") (goto-char (point-min)) (if (search-forward-regexp "unknown.+key" nil t) (setq result (concat result " -o ControlPath='tramp.%%r@%%h:%%p'")) (setq result (concat result " -o ControlPath='tramp.%%C'")))) (with-temp-buffer (call-process "ssh" nil t nil "-o" "ControlPersist") (goto-char (point-min)) (when (search-forward-regexp "missing.+argument" nil t) (setq result (concat result " -o ControlPersist=no"))))))) result) "\
 Call ssh to detect whether it supports the Control* arguments.
 Return a string to be used in `tramp-methods'.")
 
@@ -306,11 +313,6 @@ Clear password cache for connection related to VEC.
 
 \(fn VEC)" nil nil)
 
-(autoload 'tramp-time-less-p "tramp" "\
-Say whether time value T1 is less than time value T2.
-
-\(fn T1 T2)" nil nil)
-
 (autoload 'tramp-time-diff "tramp" "\
 Return the difference between the two times, in seconds.
 T1 and T2 are time values (as returned by `current-time' for example).
@@ -325,8 +327,8 @@ Only works for Bourne-like shells.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-adb" "tramp-adb.el" (21501 65468 828248
-;;;;;;  0))
+;;;### (autoloads nil "tramp-adb" "tramp-adb.el" (21710 25465 249934
+;;;;;;  582000))
 ;;; Generated autoloads from tramp-adb.el
 
 (defconst tramp-adb-method "adb" "\
@@ -357,8 +359,8 @@ Return a list of (nil host) tuples allowed to access.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-cache" "tramp-cache.el" (21291 53104
-;;;;;;  431149 0))
+;;;### (autoloads nil "tramp-cache" "tramp-cache.el" (21710 25465
+;;;;;;  249934 582000))
 ;;; Generated autoloads from tramp-cache.el
 
 (defvar tramp-cache-data (make-hash-table :test 'equal) "\
@@ -441,8 +443,8 @@ for all methods.  Resulting data are derived from connection history.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-cmds" "tramp-cmds.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "tramp-cmds" "tramp-cmds.el" (21710 25465 249934
+;;;;;;  582000))
 ;;; Generated autoloads from tramp-cmds.el
 
 (autoload 'tramp-cleanup-connection "tramp-cmds" "\
@@ -482,8 +484,8 @@ Submit a bug report to the Tramp developers.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-ftp" "tramp-ftp.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "tramp-ftp" "tramp-ftp.el" (21710 25465 250934
+;;;;;;  578000))
 ;;; Generated autoloads from tramp-ftp.el
 
 (defconst tramp-ftp-method "ftp" "\
@@ -507,11 +509,11 @@ Check if it's a filename that should be forwarded to Ange-FTP." (string= (tramp-
 
 ;;;***
 
-;;;### (autoloads nil "tramp-gvfs" "tramp-gvfs.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "tramp-gvfs" "tramp-gvfs.el" (21710 25465 250934
+;;;;;;  578000))
 ;;; Generated autoloads from tramp-gvfs.el
 
-(defvar tramp-gvfs-methods '("dav" "davs" "obex" "synce") "\
+(defvar tramp-gvfs-methods '("dav" "davs" "obex" "sftp" "synce") "\
 List of methods for remote files, accessed with GVFS.")
 
 (custom-autoload 'tramp-gvfs-methods "tramp-gvfs" t)
@@ -534,8 +536,8 @@ pass to the OPERATION.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-gw" "tramp-gw.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "tramp-gw" "tramp-gw.el" (21710 25465 250934
+;;;;;;  578000))
 ;;; Generated autoloads from tramp-gw.el
 
 (defconst tramp-gw-tunnel-method "tunnel" "\
@@ -560,8 +562,8 @@ instead of the host name declared in TARGET-VEC.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-sh" "tramp-sh.el" (21415 30982 815536
-;;;;;;  0))
+;;;### (autoloads nil "tramp-sh" "tramp-sh.el" (21710 25547 148569
+;;;;;;  458000))
 ;;; Generated autoloads from tramp-sh.el
 
 (defvar tramp-terminal-type "dumb" "\
@@ -586,8 +588,6 @@ Prompt when establishing a connection.")
 
 (add-to-list 'tramp-methods '("scpx" (tramp-login-program "ssh") (tramp-login-args (("-l" "%u") ("-p" "%p") ("%c") ("-e" "none") ("-t" "-t") ("%h") ("/bin/sh"))) (tramp-async-args (("-q"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "scp") (tramp-copy-args (("-P" "%p") ("-p" "%k") ("-q") ("-r") ("%c"))) (tramp-copy-keep-date t) (tramp-copy-recursive t) (tramp-gw-args (("-o" "GlobalKnownHostsFile=/dev/null") ("-o" "UserKnownHostsFile=/dev/null") ("-o" "StrictHostKeyChecking=no"))) (tramp-default-port 22)))
 
-(add-to-list 'tramp-methods '("sftp" (tramp-login-program "ssh") (tramp-login-args (("-l" "%u") ("-p" "%p") ("%c") ("-e" "none") ("%h"))) (tramp-async-args (("-q"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "sftp") (tramp-copy-args ("%c"))))
-
 (add-to-list 'tramp-methods '("rsync" (tramp-login-program "ssh") (tramp-login-args (("-l" "%u") ("-p" "%p") ("%c") ("-e" "none") ("%h"))) (tramp-async-args (("-q"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "rsync") (tramp-copy-args (("-t" "%k") ("-r"))) (tramp-copy-env (("RSYNC_RSH") ("ssh" "%c"))) (tramp-copy-keep-date t) (tramp-copy-keep-tmpfile t) (tramp-copy-recursive t)))
 
 (add-to-list 'tramp-methods '("rsh" (tramp-login-program "rsh") (tramp-login-args (("%h") ("-l" "%u"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c"))))
@@ -598,7 +598,9 @@ Prompt when establishing a connection.")
 
 (add-to-list 'tramp-methods '("sshx" (tramp-login-program "ssh") (tramp-login-args (("-l" "%u") ("-p" "%p") ("%c") ("-e" "none") ("-t" "-t") ("%h") ("/bin/sh"))) (tramp-async-args (("-q"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-gw-args (("-o" "GlobalKnownHostsFile=/dev/null") ("-o" "UserKnownHostsFile=/dev/null") ("-o" "StrictHostKeyChecking=no"))) (tramp-default-port 22)))
 
-(add-to-list 'tramp-methods '("telnet" (tramp-login-program "telnet") (tramp-login-args (("%h") ("%p"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-default-port 23)))
+(add-to-list 'tramp-methods '("telnet" (tramp-login-program "telnet") (tramp-login-args (("%h") ("%p") ("2>/dev/null"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-default-port 23)))
+
+(add-to-list 'tramp-methods '("nc" (tramp-login-program "telnet") (tramp-login-args (("%h") ("%p") ("2>/dev/null"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "nc") (tramp-copy-args (("-w" "1") ("-v") ("%h") ("%r"))) (tramp-remote-copy-program "nc") (tramp-remote-copy-args (("-l") ("-p" "%r"))) (tramp-default-port 23)))
 
 (add-to-list 'tramp-methods '("su" (tramp-login-program "su") (tramp-login-args (("-") ("%u"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-connection-timeout 10)))
 
@@ -608,13 +610,13 @@ Prompt when establishing a connection.")
 
 (add-to-list 'tramp-methods '("krlogin" (tramp-login-program "krlogin") (tramp-login-args (("%h") ("-l" "%u") ("-x"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c"))))
 
-(add-to-list 'tramp-methods '("plink" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("%h"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-default-port 22)))
+(add-to-list 'tramp-methods `("plink" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("-t") ("%h") ("\"") (,(format "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'" tramp-terminal-type tramp-initial-end-of-output)) ("/bin/sh") ("\""))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-default-port 22)))
 
-(add-to-list 'tramp-methods `("plinkx" (tramp-login-program "plink") (tramp-login-args (("-load") ("%h") ("-t") (,(format "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'" tramp-terminal-type tramp-initial-end-of-output)) ("/bin/sh"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c"))))
+(add-to-list 'tramp-methods `("plinkx" (tramp-login-program "plink") (tramp-login-args (("-load") ("%h") ("-t") ("\"") (,(format "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'" tramp-terminal-type tramp-initial-end-of-output)) ("/bin/sh") ("\""))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c"))))
 
-(add-to-list 'tramp-methods '("pscp" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("%h"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "pscp") (tramp-copy-args (("-l" "%u") ("-P" "%p") ("-scp") ("-p" "%k") ("-q") ("-r"))) (tramp-copy-keep-date t) (tramp-copy-recursive t) (tramp-default-port 22)))
+(add-to-list 'tramp-methods `("pscp" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("-t") ("%h") ("\"") (,(format "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'" tramp-terminal-type tramp-initial-end-of-output)) ("/bin/sh") ("\""))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "pscp") (tramp-copy-args (("-l" "%u") ("-P" "%p") ("-scp") ("-p" "%k") ("-q") ("-r"))) (tramp-copy-keep-date t) (tramp-copy-recursive t) (tramp-default-port 22)))
 
-(add-to-list 'tramp-methods '("psftp" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("%h"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "pscp") (tramp-copy-args (("-l" "%u") ("-P" "%p") ("-sftp") ("-p" "%k") ("-q") ("-r"))) (tramp-copy-keep-date t) (tramp-copy-recursive t)))
+(add-to-list 'tramp-methods `("psftp" (tramp-login-program "plink") (tramp-login-args (("-l" "%u") ("-P" "%p") ("-ssh") ("-t") ("%h") ("\"") (,(format "env 'TERM=%s' 'PROMPT_COMMAND=' 'PS1=%s'" tramp-terminal-type tramp-initial-end-of-output)) ("/bin/sh") ("\""))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-c")) (tramp-copy-program "pscp") (tramp-copy-args (("-l" "%u") ("-P" "%p") ("-sftp") ("-p" "%k") ("-q") ("-r"))) (tramp-copy-keep-date t) (tramp-copy-recursive t)))
 
 (add-to-list 'tramp-methods '("fcp" (tramp-login-program "fsh") (tramp-login-args (("%h") ("-l" "%u") ("sh" "-i"))) (tramp-remote-shell "/bin/sh") (tramp-remote-shell-args ("-i") ("-c")) (tramp-copy-program "fcp") (tramp-copy-args (("-p" "%k"))) (tramp-copy-keep-date t)))
 
@@ -622,7 +624,7 @@ Prompt when establishing a connection.")
 
 (add-to-list 'tramp-default-user-alist `(,(concat "\\`" (regexp-opt '("su" "sudo" "ksu")) "\\'") nil "root"))
 
-(add-to-list 'tramp-default-user-alist `(,(concat "\\`" (regexp-opt '("rcp" "remcp" "rsh" "telnet" "krlogin" "fcp")) "\\'") nil ,(user-login-name)))
+(add-to-list 'tramp-default-user-alist `(,(concat "\\`" (regexp-opt '("rcp" "remcp" "rsh" "telnet" "nc" "krlogin" "fcp")) "\\'") nil ,(user-login-name)))
 
 (defconst tramp-completion-function-alist-rsh '((tramp-parse-rhosts "/etc/hosts.equiv") (tramp-parse-rhosts "~/.rhosts")) "\
 Default list of (FUNCTION FILE) pairs to be examined for rsh methods.")
@@ -639,7 +641,7 @@ Default list of (FUNCTION FILE) pairs to be examined for su methods.")
 (defconst tramp-completion-function-alist-putty `((tramp-parse-putty ,(if (memq system-type '(windows-nt)) "HKEY_CURRENT_USER\\Software\\SimonTatham\\PuTTY\\Sessions" "~/.putty/sessions"))) "\
 Default list of (FUNCTION REGISTRY) pairs to be examined for putty sessions.")
 
-(eval-after-load 'tramp '(progn (tramp-set-completion-function "rcp" tramp-completion-function-alist-rsh) (tramp-set-completion-function "remcp" tramp-completion-function-alist-rsh) (tramp-set-completion-function "scp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "scpx" tramp-completion-function-alist-ssh) (tramp-set-completion-function "sftp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "rsync" tramp-completion-function-alist-ssh) (tramp-set-completion-function "rsh" tramp-completion-function-alist-rsh) (tramp-set-completion-function "remsh" tramp-completion-function-alist-rsh) (tramp-set-completion-function "ssh" tramp-completion-function-alist-ssh) (tramp-set-completion-function "sshx" tramp-completion-function-alist-ssh) (tramp-set-completion-function "telnet" tramp-completion-function-alist-telnet) (tramp-set-completion-function "su" tramp-completion-function-alist-su) (tramp-set-completion-function "sudo" tramp-completion-function-alist-su) (tramp-set-completion-function "ksu" tramp-completion-function-alist-su) (tramp-set-completion-function "krlogin" tramp-completion-function-alist-rsh) (tramp-set-completion-function "plink" tramp-completion-function-alist-ssh) (tramp-set-completion-function "plinkx" tramp-completion-function-alist-putty) (tramp-set-completion-function "pscp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "fcp" tramp-completion-function-alist-ssh)))
+(eval-after-load 'tramp '(progn (tramp-set-completion-function "rcp" tramp-completion-function-alist-rsh) (tramp-set-completion-function "remcp" tramp-completion-function-alist-rsh) (tramp-set-completion-function "scp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "scpx" tramp-completion-function-alist-ssh) (tramp-set-completion-function "rsync" tramp-completion-function-alist-ssh) (tramp-set-completion-function "rsh" tramp-completion-function-alist-rsh) (tramp-set-completion-function "remsh" tramp-completion-function-alist-rsh) (tramp-set-completion-function "ssh" tramp-completion-function-alist-ssh) (tramp-set-completion-function "sshx" tramp-completion-function-alist-ssh) (tramp-set-completion-function "telnet" tramp-completion-function-alist-telnet) (tramp-set-completion-function "nc" tramp-completion-function-alist-telnet) (tramp-set-completion-function "su" tramp-completion-function-alist-su) (tramp-set-completion-function "sudo" tramp-completion-function-alist-su) (tramp-set-completion-function "ksu" tramp-completion-function-alist-su) (tramp-set-completion-function "krlogin" tramp-completion-function-alist-rsh) (tramp-set-completion-function "plink" tramp-completion-function-alist-ssh) (tramp-set-completion-function "plinkx" tramp-completion-function-alist-putty) (tramp-set-completion-function "pscp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "psftp" tramp-completion-function-alist-ssh) (tramp-set-completion-function "fcp" tramp-completion-function-alist-ssh)))
 
 (defvar tramp-remote-path '(tramp-default-remote-path "/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin" "/local/bin" "/local/freeware/bin" "/local/gnu/bin" "/usr/freeware/bin" "/usr/pkg/bin" "/usr/contrib/bin" "/opt/bin" "/opt/sbin" "/opt/local/bin") "\
 List of directories to search for executables on remote host.
@@ -683,8 +685,8 @@ Fall back to normal file name handler if no Tramp handler exists.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-smb" "tramp-smb.el" (21415 30982 815536
-;;;;;;  0))
+;;;### (autoloads nil "tramp-smb" "tramp-smb.el" (21710 25465 251934
+;;;;;;  573000))
 ;;; Generated autoloads from tramp-smb.el
 
 (defconst tramp-smb-method "smb" "\
@@ -712,8 +714,8 @@ pass to the OPERATION.
 
 ;;;***
 
-;;;### (autoloads nil "tramp-uu" "tramp-uu.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "tramp-uu" "tramp-uu.el" (21710 25465 251934
+;;;;;;  573000))
 ;;; Generated autoloads from tramp-uu.el
 
 (autoload 'tramp-uuencode-region "tramp-uu" "\
@@ -723,11 +725,11 @@ UU-encode the region between BEG and END.
 
 ;;;***
 
-;;;### (autoloads nil "trampver" "trampver.el" (21291 53104 431149
-;;;;;;  0))
+;;;### (autoloads nil "trampver" "trampver.el" (21710 25465 253934
+;;;;;;  564000))
 ;;; Generated autoloads from trampver.el
 
-(defconst tramp-version "2.2.9-24.4" "\
+(defconst tramp-version "2.2.11-24.5" "\
 This version of Tramp.")
 
 (defconst tramp-bug-report-address "tramp-devel@gnu.org" "\
@@ -746,8 +748,8 @@ Email address to send bug reports to.")
 ;;;;;;  "rcirc.el" "rlogin.el" "sasl-cram.el" "sasl-digest.el" "sasl-ntlm.el"
 ;;;;;;  "sasl.el" "secrets.el" "shr-color.el" "shr.el" "snmp-mode.el"
 ;;;;;;  "soap-client.el" "soap-inspect.el" "socks.el" "telnet.el"
-;;;;;;  "tls.el" "tramp-compat.el" "webjump.el" "zeroconf.el") (21569
-;;;;;;  15427 664069 24000))
+;;;;;;  "tls.el" "tramp-compat.el" "webjump.el" "zeroconf.el") (21713
+;;;;;;  25979 899217 68000))
 
 ;;;***
 

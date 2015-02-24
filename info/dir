@@ -88,8 +88,8 @@ Emacs misc features
 * Speedbar: (speedbar).         File/Tag summarizing utility.
 * SRecode: (srecode).           Semantic template code generator.
 * Todo Mode: (todo-mode).       Make and maintain todo lists.
-* VIP: (vip).                   An older VI-emulation for Emacs.
 * VIPER: (viper).               A VI-emulation mode for Emacs.
+* VIP: (vip).                   An obsolete VI-emulation for Emacs.
 * Wisent: (wisent).             Semantic Wisent parser development.
 * WoMan: (woman).               Browse UN*X Manual Pages "W.O. (without) Man".
 
