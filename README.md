@@ -1,3 +1,17 @@
+# This repo is retired. 
+
+Since the developer of Emacs-mac-port Mr. Yamamoto Mitsuharu [published](http://lists.gnu.org/archive/html/emacs-devel/2015-03/msg00194.html) his git repo along with Emacs 24.4.91-mac-5.5 release, the mission of this unofficial mirror has been accomplished. 
+
+Please checkout the latest and official emacs-mac-port code from
+
+[http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git](http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git)
+
+I will focus on maintaining homebrew and homebrew-cask script for emacs-mac-port from [homebrew-emacsmacport](railwaycat/homebrew-emacsmacport), pre-built binary will also provided. 
+
+Thanks to everyone who gave help and suggestion for this mirror! 
+
+===
+
 # Emacs Mac Port
 
 ## What is this? ##
