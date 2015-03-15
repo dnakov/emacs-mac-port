@@ -6,7 +6,7 @@ Please checkout the latest and official emacs-mac-port code from
 
 [http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git](http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git)
 
-I will focus on maintaining homebrew and homebrew-cask script for emacs-mac-port from [homebrew-emacsmacport](https://github.com/railwaycat/homebrew-emacsmacport), pre-built binary will also provided. 
+I will focus on maintaining homebrew and homebrew-cask script for emacs-mac-port from [homebrew-emacsmacport](https://github.com/railwaycat/homebrew-emacsmacport), pre-built binary will also provided by [https://github.com/railwaycat/emacs-mac-port/wiki/Downloads](https://github.com/railwaycat/emacs-mac-port/wiki/Downloads). 
 
 Thanks to everyone who gave help and suggestion for this mirror! 
 
