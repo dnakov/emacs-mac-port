@@ -1,14 +1,10 @@
-# This repo is retired. 
+# This unofficial GitHub mirror has been retired.
 
-Since the developer of Emacs-mac-port Mr. Yamamoto Mitsuharu [published](http://lists.gnu.org/archive/html/emacs-devel/2015-03/msg00194.html) his git repo along with Emacs 24.4.91-mac-5.5 release, the mission of this unofficial mirror has been accomplished. 
+A regularly updated and official [git repository](http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git/) for this project is [now available](http://lists.gnu.org/archive/html/emacs-devel/2015-03/msg00194.html), as is a new, up-to-date [GitHub mirror](https://github.com/railwaycat/mirror-emacs-mac).
 
-Please checkout the latest and official emacs-mac-port code from
+[Homebrew](https://github.com/railwaycat/homebrew-emacsmacport/blob/master/Formula/emacs-mac.rb) and [Homebrew Cask](https://github.com/railwaycat/homebrew-emacsmacport/blob/master/Casks/emacs-mac.rb) formulas, as well as, [pre-built binaries](https://github.com/railwaycat/homebrew-emacsmacport/releases) will continue to be updated and made available [here on GitHub](https://github.com/railwaycat/homebrew-emacsmacport).
 
-[http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git](http://www.math.s.chiba-u.ac.jp/~mituharu/emacs-mac.git)
-
-I will focus on maintaining homebrew and homebrew-cask script for emacs-mac-port from [homebrew-emacsmacport](https://github.com/railwaycat/homebrew-emacsmacport), pre-built binary will also provided by [https://github.com/railwaycat/emacs-mac-port/wiki/Downloads](https://github.com/railwaycat/emacs-mac-port/wiki/Downloads). 
-
-Thanks to everyone who gave help and suggestion for this mirror! 
+Thanks to everyone who helped and gave suggestions for this mirror!
 
 ===
 
